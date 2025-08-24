@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meta Analysis - Dota 2 Heroes</title>
+    <title>Meta Analysis - Dota 2 Current Meta & Statistics</title>
+    <meta name="description" content="Comprehensive Dota 2 meta analysis, hero statistics, win rates, pick rates, and current meta trends. Stay updated with the latest competitive meta.">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/animations.css">
-    <link rel="stylesheet" href="styles/meta.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Floating Background Icons -->
     <div class="floating-icons">
         <div class="floating-icon" data-speed="2"><i class="fas fa-chart-line"></i></div>
         <div class="floating-icon" data-speed="1.5"><i class="fas fa-trophy"></i></div>
-        <div class="floating-icon" data-speed="3"><i class="fas fa-trending-up"></i></div>
-        <div class="floating-icon" data-speed="2.5"><i class="fas fa-analytics"></i></div>
-        <div class="floating-icon" data-speed="1.8"><i class="fas fa-chart-bar"></i></div>
-        <div class="floating-icon" data-speed="2.2"><i class="fas fa-percentage"></i></div>
+        <div class="floating-icon" data-speed="3"><i class="fas fa-fire"></i></div>
+        <div class="floating-icon" data-speed="2.5"><i class="fas fa-bolt"></i></div>
+        <div class="floating-icon" data-speed="1.8"><i class="fas fa-gem"></i></div>
+        <div class="floating-icon" data-speed="2.2"><i class="fas fa-crown"></i></div>
+        <div class="floating-icon" data-speed="1.2"><i class="fas fa-dragon"></i></div>
+        <div class="floating-icon" data-speed="2.8"><i class="fas fa-star"></i></div>
     </div>
 
-    <!-- Navigation -->
+    <!-- Enhanced Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -29,12 +31,12 @@
                 <span>Dota Heroes</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="heroes.html">Heroes</a></li>
-                <li><a href="meta.html" class="active">Meta</a></li>
-                <li><a href="guides.html">Guides</a></li>
-                <li><a href="tournaments.html">Tournaments</a></li>
-                <li><a href="news.html">News</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="heroes.html"><i class="fas fa-users"></i> Heroes</a></li>
+                <li><a href="meta.html" class="active"><i class="fas fa-chart-line"></i> Meta</a></li>
+                <li><a href="guides.html"><i class="fas fa-book"></i> Guides</a></li>
+                <li><a href="tournaments.html"><i class="fas fa-trophy"></i> Tournaments</a></li>
+                <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
             </ul>
             <div class="nav-toggle">
                 <span></span>
@@ -48,105 +50,307 @@
     <section class="hero-section">
         <div class="container">
             <h1 class="hero-title">Meta Analysis</h1>
-            <p class="hero-subtitle">Current meta trends, pick rates, and win rates</p>
+            <p class="hero-subtitle">Comprehensive analysis of the current Dota 2 meta, hero statistics, and competitive trends</p>
+            
+            <!-- Meta Overview Cards -->
+            <div class="meta-overview">
+                <div class="meta-card scroll-animate">
+                    <div class="meta-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Current Meta</h3>
+                    <p>Fast-paced, aggressive gameplay with emphasis on early game dominance</p>
+                    <div class="meta-stats">
+                        <span><i class="fas fa-clock"></i> Updated: 2 hours ago</span>
+                        <span><i class="fas fa-users"></i> Based on 50K+ matches</span>
+                    </div>
+                </div>
+                
+                <div class="meta-card scroll-animate">
+                    <div class="meta-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Meta Score</h3>
+                    <p>Overall meta stability and balance assessment</p>
+                    <div class="meta-score">
+                        <div class="score-circle">
+                            <span class="score">8.5</span>
+                            <span class="score-label">/10</span>
+                        </div>
+                        <span class="score-description">Very Balanced</span>
+                    </div>
+                </div>
+                
+                <div class="meta-card scroll-animate">
+                    <div class="meta-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Patch Version</h3>
+                    <p>Current game version and meta impact</p>
+                    <div class="patch-info">
+                        <span class="patch-version">7.35b</span>
+                        <span class="patch-date">Released: Dec 15, 2024</span>
+                        <span class="patch-impact">Major Changes</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Meta Overview -->
-    <section class="meta-overview">
+    <!-- Top Heroes Section -->
+    <section class="top-heroes-section">
         <div class="container">
-            <div class="meta-stats">
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-users"></i>
+            <h2 class="section-title">Top Meta Heroes</h2>
+            <p class="section-subtitle">The most powerful and frequently picked heroes in the current meta</p>
+            
+            <div class="top-heroes-grid">
+                <div class="top-hero-card scroll-animate">
+                    <div class="hero-rank">#1</div>
+                    <div class="hero-image">
+                        <i class="fas fa-user-ninja"></i>
                     </div>
-                    <div class="stat-content">
-                        <h3>7.35</h3>
-                        <p>Current Patch</p>
+                    <div class="hero-info">
+                        <h3>Phantom Assassin</h3>
+                        <p>Deadly carry with critical strike potential</p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-label">Pick Rate</span>
+                                <span class="stat-value">65.2%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Win Rate</span>
+                                <span class="stat-value">54.8%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Ban Rate</span>
+                                <span class="stat-value">23.1%</span>
+                            </div>
+                        </div>
+                        <div class="meta-tags">
+                            <span class="tag meta">Meta</span>
+                            <span class="tag carry">Carry</span>
+                            <span class="tag strong">Strong</span>
+                        </div>
                     </div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-calendar"></i>
+                
+                <div class="top-hero-card scroll-animate">
+                    <div class="hero-rank">#2</div>
+                    <div class="hero-image">
+                        <i class="fas fa-magic"></i>
                     </div>
-                    <div class="stat-content">
-                        <h3>24/7</h3>
-                        <p>Updated</p>
+                    <div class="hero-info">
+                        <h3>Invoker</h3>
+                        <p>Master of the Elements with complex spell combinations</p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-label">Pick Rate</span>
+                                <span class="stat-value">58.7%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Win Rate</span>
+                                <span class="stat-value">52.3%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Ban Rate</span>
+                                <span class="stat-value">18.9%</span>
+                            </div>
+                        </div>
+                        <div class="meta-tags">
+                            <span class="tag meta">Meta</span>
+                            <span class="tag mid">Mid</span>
+                            <span class="tag complex">Complex</span>
+                        </div>
                     </div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-gamepad"></i>
+                
+                <div class="top-hero-card scroll-animate">
+                    <div class="hero-rank">#3</div>
+                    <div class="hero-image">
+                        <i class="fas fa-snowflake"></i>
                     </div>
-                    <div class="stat-content">
-                        <h3>1M+</h3>
-                        <p>Matches Analyzed</p>
-                    </div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <div class="stat-content">
-                        <h3>50+</h3>
-                        <p>Tournaments</p>
+                    <div class="hero-info">
+                        <h3>Crystal Maiden</h3>
+                        <p>Frost sorceress providing team support and control</p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-label">Pick Rate</span>
+                                <span class="stat-value">52.1%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Win Rate</span>
+                                <span class="stat-value">51.7%</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Ban Rate</span>
+                                <span class="stat-value">12.4%</span>
+                            </div>
+                        </div>
+                        <div class="meta-tags">
+                            <span class="tag meta">Meta</span>
+                            <span class="tag support">Support</span>
+                            <span class="tag beginner">Beginner</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Top Heroes -->
-    <section class="top-heroes">
+    <!-- Meta Statistics Section -->
+    <section class="meta-stats-section">
         <div class="container">
-            <h2 class="section-title">Top Picked Heroes</h2>
-            <div class="heroes-tabs">
-                <button class="tab-btn active" data-tab="pick-rate">Pick Rate</button>
-                <button class="tab-btn" data-tab="win-rate">Win Rate</button>
-                <button class="tab-btn" data-tab="ban-rate">Ban Rate</button>
-            </div>
-            <div class="heroes-list" id="heroes-list">
-                <!-- Hero list will be populated by JavaScript -->
+            <h2 class="section-title">Meta Statistics</h2>
+            <p class="section-subtitle">Detailed statistics and trends from the current meta</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card scroll-animate-left">
+                    <h3><i class="fas fa-chart-pie"></i> Role Distribution</h3>
+                    <div class="role-stats">
+                        <div class="role-item">
+                            <span class="role-name">Carry</span>
+                            <div class="role-bar">
+                                <div class="role-fill" style="width: 35%"></div>
+                            </div>
+                            <span class="role-percentage">35%</span>
+                        </div>
+                        <div class="role-item">
+                            <span class="role-name">Support</span>
+                            <div class="role-bar">
+                                <div class="role-fill" style="width: 40%"></div>
+                            </div>
+                            <span class="role-percentage">40%</span>
+                        </div>
+                        <div class="role-item">
+                            <span class="role-name">Mid</span>
+                            <div class="role-bar">
+                                <div class="role-fill" style="width: 20%"></div>
+                            </div>
+                            <span class="role-percentage">20%</span>
+                        </div>
+                        <div class="role-item">
+                            <span class="role-name">Offlane</span>
+                            <div class="role-bar">
+                                <div class="role-fill" style="width: 15%"></div>
+                            </div>
+                            <span class="role-percentage">15%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card scroll-animate">
+                    <h3><i class="fas fa-clock"></i> Game Duration</h3>
+                    <div class="duration-stats">
+                        <div class="duration-item">
+                            <span class="duration-label">Average Game Time</span>
+                            <span class="duration-value">32:45</span>
+                        </div>
+                        <div class="duration-item">
+                            <span class="duration-label">Fastest Victory</span>
+                            <span class="duration-value">18:23</span>
+                        </div>
+                        <div class="duration-item">
+                            <span class="duration-label">Longest Game</span>
+                            <span class="duration-value">1:15:42</span>
+                        </div>
+                        <div class="duration-trend">
+                            <span class="trend-label">Trend</span>
+                            <span class="trend-value positive"><i class="fas fa-arrow-up"></i> Games getting faster</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card scroll-animate-right">
+                    <h3><i class="fas fa-trophy"></i> Win Rate Analysis</h3>
+                    <div class="winrate-stats">
+                        <div class="winrate-item">
+                            <span class="winrate-label">Radiant Win Rate</span>
+                            <span class="winrate-value">51.2%</span>
+                        </div>
+                        <div class="winrate-item">
+                            <span class="winrate-label">Dire Win Rate</span>
+                            <span class="winrate-value">48.8%</span>
+                        </div>
+                        <div class="winrate-item">
+                            <span class="winrate-label">First Blood Impact</span>
+                            <span class="winrate-value">+12.3%</span>
+                        </div>
+                        <div class="winrate-item">
+                            <span class="winrate-label">Roshan Impact</span>
+                            <span class="winrate-value">+18.7%</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Meta Trends -->
-    <section class="meta-trends">
+    <!-- Meta Trends Section -->
+    <section class="meta-trends-section">
         <div class="container">
             <h2 class="section-title">Meta Trends</h2>
+            <p class="section-subtitle">How the meta has evolved over the past few patches</p>
+            
             <div class="trends-grid">
-                <div class="trend-card">
-                    <h3>Rising Heroes</h3>
+                <div class="trend-card scroll-animate-left">
+                    <h3><i class="fas fa-arrow-trend-up"></i> Rising Heroes</h3>
                     <div class="trend-list">
-                        <div class="trend-item">
-                            <span class="hero-name">Invoker</span>
-                            <span class="trend-value positive">+15%</span>
+                        <div class="trend-item rising">
+                            <span class="hero-name">Omniknight</span>
+                            <span class="trend-change">+15.2%</span>
+                            <span class="trend-reason">Strong healing meta</span>
                         </div>
-                        <div class="trend-item">
-                            <span class="hero-name">Crystal Maiden</span>
-                            <span class="trend-value positive">+12%</span>
+                        <div class="trend-item rising">
+                            <span class="hero-name">Wraith King</span>
+                            <span class="trend-change">+12.8%</span>
+                            <span class="trend-reason">Item buffs</span>
                         </div>
-                        <div class="trend-item">
-                            <span class="hero-name">Phantom Assassin</span>
-                            <span class="trend-value positive">+8%</span>
+                        <div class="trend-item rising">
+                            <span class="hero-name">Lich</span>
+                            <span class="trend-change">+9.4%</span>
+                            <span class="trend-reason">Support meta shift</span>
                         </div>
                     </div>
                 </div>
-                <div class="trend-card">
-                    <h3>Falling Heroes</h3>
+                
+                <div class="trend-card scroll-animate">
+                    <h3><i class="fas fa-arrow-trend-down"></i> Falling Heroes</h3>
                     <div class="trend-list">
-                        <div class="trend-item">
-                            <span class="hero-name">Axe</span>
-                            <span class="trend-value negative">-10%</span>
+                        <div class="trend-item falling">
+                            <span class="hero-name">Pudge</span>
+                            <span class="trend-change">-8.7%</span>
+                            <span class="trend-reason">Hook nerf</span>
                         </div>
-                        <div class="trend-item">
-                            <span class="hero-name">Juggernaut</span>
-                            <span class="trend-value negative">-7%</span>
+                        <div class="trend-item falling">
+                            <span class="hero-name">Techies</span>
+                            <span class="trend-change">-12.3%</span>
+                            <span class="trend-reason">Mine damage reduction</span>
                         </div>
-                        <div class="trend-item">
-                            <span class="hero-name">Lion</span>
-                            <span class="trend-value negative">-5%</span>
+                        <div class="trend-item falling">
+                            <span class="hero-name">Meepo</span>
+                            <span class="trend-change">-6.9%</span>
+                            <span class="trend-reason">Micro complexity</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="trend-card scroll-animate-right">
+                    <h3><i class="fas fa-balance-scale"></i> Meta Shifts</h3>
+                    <div class="shift-list">
+                        <div class="shift-item">
+                            <span class="shift-title">Early Game Focus</span>
+                            <span class="shift-description">Teams prioritizing early aggression and map control</span>
+                            <span class="shift-impact">High Impact</span>
+                        </div>
+                        <div class="shift-item">
+                            <span class="shift-title">Support Economy</span>
+                            <span class="shift-description">Supports getting more farm and items</span>
+                            <span class="shift-impact">Medium Impact</span>
+                        </div>
+                        <div class="shift-item">
+                            <span class="shift-title">Teamfight Meta</span>
+                            <span class="shift-description">5v5 teamfights becoming more common</span>
+                            <span class="shift-impact">High Impact</span>
                         </div>
                     </div>
                 </div>
@@ -154,88 +358,81 @@
         </div>
     </section>
 
-    <!-- Role Analysis -->
-    <section class="role-analysis">
+    <!-- Counter Picks Section -->
+    <section class="counter-picks-section">
         <div class="container">
-            <h2 class="section-title">Role Analysis</h2>
-            <div class="roles-grid">
-                <div class="role-card">
-                    <div class="role-header">
-                        <i class="fas fa-sword"></i>
-                        <h3>Carry</h3>
+            <h2 class="section-title">Counter Pick Analysis</h2>
+            <p class="section-subtitle">Essential counter picks and hero matchups in the current meta</p>
+            
+            <div class="counter-grid">
+                <div class="counter-card scroll-animate">
+                    <div class="counter-hero">
+                        <i class="fas fa-user-ninja"></i>
+                        <h3>Phantom Assassin</h3>
                     </div>
-                    <div class="role-stats">
-                        <div class="stat">
-                            <span class="label">Pick Rate</span>
-                            <span class="value">45%</span>
-                        </div>
-                        <div class="stat">
-                            <span class="label">Win Rate</span>
-                            <span class="value">52%</span>
-                        </div>
-                        <div class="stat">
-                            <span class="label">Meta Score</span>
-                            <span class="value">8.5/10</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="role-card">
-                    <div class="role-header">
-                        <i class="fas fa-shield"></i>
-                        <h3>Support</h3>
-                    </div>
-                    <div class="role-stats">
-                        <div class="stat">
-                            <span class="label">Pick Rate</span>
-                            <span class="value">38%</span>
-                        </div>
-                        <div class="stat">
-                            <span class="label">Win Rate</span>
-                            <span class="value">48%</span>
-                        </div>
-                        <div class="stat">
-                            <span class="label">Meta Score</span>
-                            <span class="value">7.2/10</span>
+                    <div class="counters">
+                        <h4>Strong Counters</h4>
+                        <div class="counter-list">
+                            <div class="counter-item">
+                                <span class="counter-name">Axe</span>
+                                <span class="counter-winrate">68.2%</span>
+                            </div>
+                            <div class="counter-item">
+                                <span class="counter-name">Timbersaw</span>
+                                <span class="counter-winrate">65.7%</span>
+                            </div>
+                            <div class="counter-item">
+                                <span class="counter-name">Bristleback</span>
+                                <span class="counter-winrate">62.9%</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="role-card">
-                    <div class="role-header">
-                        <i class="fas fa-bolt"></i>
-                        <h3>Mid</h3>
+                
+                <div class="counter-card scroll-animate">
+                    <div class="counter-hero">
+                        <i class="fas fa-magic"></i>
+                        <h3>Invoker</h3>
                     </div>
-                    <div class="role-stats">
-                        <div class="stat">
-                            <span class="label">Pick Rate</span>
-                            <span class="value">42%</span>
-                        </div>
-                        <div class="stat">
-                            <span class="label">Win Rate</span>
-                            <span class="value">50%</span>
-                        </div>
-                        <div class="stat">
-                            <span class="label">Meta Score</span>
-                            <span class="value">8.0/10</span>
+                    <div class="counters">
+                        <h4>Strong Counters</h4>
+                        <div class="counter-list">
+                            <div class="counter-item">
+                                <span class="counter-name">Anti-Mage</span>
+                                <span class="counter-winrate">71.3%</span>
+                            </div>
+                            <div class="counter-item">
+                                <span class="counter-name">Storm Spirit</span>
+                                <span class="counter-winrate">67.8%</span>
+                            </div>
+                            <div class="counter-item">
+                                <span class="counter-name">Queen of Pain</span>
+                                <span class="counter-winrate">64.2%</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="role-card">
-                    <div class="role-header">
-                        <i class="fas fa-mountain"></i>
-                        <h3>Offlane</h3>
+                
+                <div class="counter-card scroll-animate">
+                    <div class="counter-hero">
+                        <i class="fas fa-snowflake"></i>
+                        <h3>Crystal Maiden</h3>
                     </div>
-                    <div class="role-stats">
-                        <div class="stat">
-                            <span class="label">Pick Rate</span>
-                            <span class="value">35%</span>
-                        </div>
-                        <div class="stat">
-                            <span class="label">Win Rate</span>
-                            <span class="value">49%</span>
-                        </div>
-                        <div class="stat">
-                            <span class="label">Meta Score</span>
-                            <span class="value">7.8/10</span>
+                    <div class="counters">
+                        <h4>Strong Counters</h4>
+                        <div class="counter-list">
+                            <div class="counter-item">
+                                <span class="counter-name">Slark</span>
+                                <span class="counter-winrate">69.1%</span>
+                            </div>
+                            <div class="counter-item">
+                                <span class="counter-name">Riki</span>
+                                <span class="counter-winrate">66.4%</span>
+                            </div>
+                            <div class="counter-item">
+                                <span class="counter-name">Bounty Hunter</span>
+                                <span class="counter-winrate">63.7%</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -243,41 +440,178 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Pro Meta Section -->
+    <section class="pro-meta-section">
+        <div class="container">
+            <h2 class="section-title">Professional Meta</h2>
+            <p class="section-subtitle">Meta trends from professional tournaments and high-level play</p>
+            
+            <div class="pro-meta-grid">
+                <div class="pro-card scroll-animate-left">
+                    <h3><i class="fas fa-crown"></i> Pro Favorites</h3>
+                    <div class="pro-heroes">
+                        <div class="pro-hero">
+                            <span class="hero-name">Phantom Assassin</span>
+                            <span class="pick-rate">78.3%</span>
+                            <span class="win-rate">56.2%</span>
+                        </div>
+                        <div class="pro-hero">
+                            <span class="hero-name">Invoker</span>
+                            <span class="pick-rate">72.1%</span>
+                            <span class="win-rate">54.8%</span>
+                        </div>
+                        <div class="pro-hero">
+                            <span class="hero-name">Crystal Maiden</span>
+                            <span class="pick-rate">68.9%</span>
+                            <span class="win-rate">52.7%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pro-card scroll-animate">
+                    <h3><i class="fas fa-ban"></i> Pro Bans</h3>
+                    <div class="pro-bans">
+                        <div class="ban-hero">
+                            <span class="hero-name">Pudge</span>
+                            <span class="ban-rate">45.2%</span>
+                            <span class="ban-reason">Hook mechanics</span>
+                        </div>
+                        <div class="ban-hero">
+                            <span class="hero-name">Techies</span>
+                            <span class="ban-rate">42.8%</span>
+                            <span class="ban-reason">Game disruption</span>
+                        </div>
+                        <div class="ban-hero">
+                            <span class="hero-name">Meepo</span>
+                            <span class="ban-rate">38.5%</span>
+                            <span class="ban-reason">Micro complexity</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pro-card scroll-animate-right">
+                    <h3><i class="fas fa-trophy"></i> Tournament Stats</h3>
+                    <div class="tournament-stats">
+                        <div class="tournament-stat">
+                            <span class="stat-label">Average Game Time</span>
+                            <span class="stat-value">28:45</span>
+                        </div>
+                        <div class="tournament-stat">
+                            <span class="stat-label">First Blood Rate</span>
+                            <span class="stat-value">89.2%</span>
+                        </div>
+                        <div class="tournament-stat">
+                            <span class="stat-label">Roshan Kills</span>
+                            <span class="stat-value">2.3 per game</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meta Predictions Section -->
+    <section class="predictions-section">
+        <div class="container">
+            <h2 class="section-title">Meta Predictions</h2>
+            <p class="section-subtitle">Expert predictions for upcoming meta changes and hero balance</p>
+            
+            <div class="predictions-grid">
+                <div class="prediction-card scroll-animate">
+                    <div class="prediction-header">
+                        <i class="fas fa-crystal-ball"></i>
+                        <h3>Next Patch Predictions</h3>
+                    </div>
+                    <div class="prediction-content">
+                        <div class="prediction-item">
+                            <span class="prediction-text">Phantom Assassin likely to receive minor nerfs</span>
+                            <span class="prediction-confidence">85%</span>
+                        </div>
+                        <div class="prediction-item">
+                            <span class="prediction-text">Support heroes getting buffs</span>
+                            <span class="prediction-confidence">72%</span>
+                        </div>
+                        <div class="prediction-item">
+                            <span class="prediction-text">New hero announcement</span>
+                            <span class="prediction-confidence">60%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="prediction-card scroll-animate">
+                    <div class="prediction-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Meta Evolution</h3>
+                    </div>
+                    <div class="prediction-content">
+                        <div class="prediction-item">
+                            <span class="prediction-text">Shift towards late-game carries</span>
+                            <span class="prediction-confidence">78%</span>
+                        </div>
+                        <div class="prediction-item">
+                            <span class="prediction-text">More emphasis on team coordination</span>
+                            <span class="prediction-confidence">91%</span>
+                        </div>
+                        <div class="prediction-item">
+                            <span class="prediction-text">Rise of utility supports</span>
+                            <span class="prediction-confidence">67%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Dota Heroes</h3>
-                    <p>Your ultimate guide to mastering Dota 2 heroes</p>
+                    <h3><i class="fas fa-gamepad"></i> Dota Heroes</h3>
+                    <p>Your ultimate guide to mastering Dota 2 heroes. Comprehensive strategies, builds, and meta analysis to help you climb the ranks.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-reddit"></i></a>
+                    </div>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
                     <ul>
-                        <li><a href="heroes.html">Heroes</a></li>
-                        <li><a href="meta.html">Meta</a></li>
-                        <li><a href="guides.html">Guides</a></li>
-                        <li><a href="tournaments.html">Tournaments</a></li>
+                        <li><a href="heroes.html"><i class="fas fa-users"></i> All Heroes</a></li>
+                        <li><a href="meta.html"><i class="fas fa-chart-line"></i> Meta Analysis</a></li>
+                        <li><a href="guides.html"><i class="fas fa-book"></i> Strategy Guides</a></li>
+                        <li><a href="tournaments.html"><i class="fas fa-trophy"></i> Tournaments</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Resources</h4>
+                    <h4><i class="fas fa-tools"></i> Resources</h4>
                     <ul>
-                        <li><a href="news.html">News</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="news.html"><i class="fas fa-newspaper"></i> Latest News</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-shield-alt"></i> Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html"><i class="fas fa-user-shield"></i> Privacy Policy</a></li>
+                        <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                        <li><a href="sitemap.html"><i class="fas fa-sitemap"></i> Sitemap</a></li>
+                        <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Dota Heroes. All rights reserved.</p>
+                <p>&copy; 2024 Dota Heroes. All rights reserved. Not affiliated with Valve Corporation.</p>
+                <p>Dota 2 is a registered trademark of Valve Corporation.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
-    <script src="js/meta.js"></script>
 </body>
 </html>

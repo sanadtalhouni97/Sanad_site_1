@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guides - Dota 2 Heroes</title>
+    <title>Strategy Guides - Dota 2 Hero Guides & Gameplay Tips</title>
+    <meta name="description" content="Comprehensive Dota 2 strategy guides, hero builds, gameplay tips, and advanced techniques. Master the game with expert strategies and detailed walkthroughs.">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/animations.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Floating Background Icons -->
+    <div class="floating-icons">
+        <div class="floating-icon" data-speed="2"><i class="fas fa-book"></i></div>
+        <div class="floating-icon" data-speed="1.5"><i class="fas fa-graduation-cap"></i></div>
+        <div class="floating-icon" data-speed="3"><i class="fas fa-lightbulb"></i></div>
+        <div class="floating-icon" data-speed="2.5"><i class="fas fa-brain"></i></div>
+        <div class="floating-icon" data-speed="1.8"><i class="fas fa-target"></i></div>
+        <div class="floating-icon" data-speed="2.2"><i class="fas fa-chess"></i></div>
+        <div class="floating-icon" data-speed="1.2"><i class="fas fa-puzzle-piece"></i></div>
+        <div class="floating-icon" data-speed="2.8"><i class="fas fa-magic"></i></div>
+    </div>
+
+    <!-- Enhanced Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -17,12 +31,12 @@
                 <span>Dota Heroes</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="heroes.html">Heroes</a></li>
-                <li><a href="meta.html">Meta</a></li>
-                <li><a href="guides.html" class="active">Guides</a></li>
-                <li><a href="tournaments.html">Tournaments</a></li>
-                <li><a href="news.html">News</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="heroes.html"><i class="fas fa-users"></i> Heroes</a></li>
+                <li><a href="meta.html"><i class="fas fa-chart-line"></i> Meta</a></li>
+                <li><a href="guides.html" class="active"><i class="fas fa-book"></i> Guides</a></li>
+                <li><a href="tournaments.html"><i class="fas fa-trophy"></i> Tournaments</a></li>
+                <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
             </ul>
             <div class="nav-toggle">
                 <span></span>
@@ -32,38 +46,539 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <h1 class="hero-title">Hero Guides</h1>
-            <p class="hero-subtitle">Master every hero with detailed guides and strategies</p>
-        </div>
-    </section>
-
-    <section class="guides-section">
-        <div class="container">
-            <div class="guides-grid">
-                <div class="guide-card">
-                    <h3>Invoker Guide</h3>
-                    <p>Master the complex spell combinations</p>
+            <h1 class="hero-title">Strategy Guides</h1>
+            <p class="hero-subtitle">Master Dota 2 with comprehensive guides, hero builds, and advanced gameplay strategies</p>
+            
+            <!-- Guide Categories -->
+            <div class="guide-categories">
+                <div class="category-card scroll-animate">
+                    <div class="category-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Hero Guides</h3>
+                    <p>Detailed guides for every hero with builds, counters, and strategies</p>
+                    <span class="guide-count">120+ Guides</span>
                 </div>
-                <div class="guide-card">
-                    <h3>Crystal Maiden Guide</h3>
-                    <p>Support strategies and positioning</p>
+                
+                <div class="category-card scroll-animate">
+                    <div class="category-icon">
+                        <i class="fas fa-chess"></i>
+                    </div>
+                    <h3>Strategy Guides</h3>
+                    <p>Advanced gameplay strategies, positioning, and team coordination</p>
+                    <span class="guide-count">50+ Strategies</span>
                 </div>
-                <div class="guide-card">
-                    <h3>Phantom Assassin Guide</h3>
-                    <p>Carry gameplay and item builds</p>
+                
+                <div class="category-card scroll-animate">
+                    <div class="category-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Beginner Guides</h3>
+                    <p>Essential tips and tutorials for new players</p>
+                    <span class="guide-count">25+ Tutorials</span>
+                </div>
+                
+                <div class="category-card scroll-animate">
+                    <div class="category-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Pro Strategies</h3>
+                    <p>Professional player strategies and meta analysis</p>
+                    <span class="guide-count">30+ Pro Tips</span>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Featured Guides Section -->
+    <section class="featured-guides-section">
+        <div class="container">
+            <h2 class="section-title">Featured Guides</h2>
+            <p class="section-subtitle">Top-rated guides from our community and professional players</p>
+            
+            <div class="featured-guides-grid">
+                <div class="guide-card featured scroll-animate">
+                    <div class="guide-badge">Featured</div>
+                    <div class="guide-image">
+                        <i class="fas fa-user-ninja"></i>
+                    </div>
+                    <div class="guide-content">
+                        <h3>Phantom Assassin Complete Guide</h3>
+                        <p>Master the art of assassination with this comprehensive PA guide covering builds, farming patterns, and teamfight positioning.</p>
+                        <div class="guide-meta">
+                            <span><i class="fas fa-user"></i> By ProPlayer123</span>
+                            <span><i class="fas fa-eye"></i> 15.2K views</span>
+                            <span><i class="fas fa-star"></i> 4.8/5</span>
+                        </div>
+                        <div class="guide-tags">
+                            <span class="tag carry">Carry</span>
+                            <span class="tag advanced">Advanced</span>
+                            <span class="tag popular">Popular</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Read Guide</a>
+                    </div>
+                </div>
+                
+                <div class="guide-card scroll-animate">
+                    <div class="guide-image">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="guide-content">
+                        <h3>Invoker Spell Combinations</h3>
+                        <p>Learn the most effective spell combinations and when to use them in different situations.</p>
+                        <div class="guide-meta">
+                            <span><i class="fas fa-user"></i> By InvokerMaster</span>
+                            <span><i class="fas fa-eye"></i> 12.8K views</span>
+                            <span><i class="fas fa-star"></i> 4.7/5</span>
+                        </div>
+                        <div class="guide-tags">
+                            <span class="tag mid">Mid</span>
+                            <span class="tag complex">Complex</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Read Guide</a>
+                    </div>
+                </div>
+                
+                <div class="guide-card scroll-animate">
+                    <div class="guide-image">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <div class="guide-content">
+                        <h3>Support Positioning Guide</h3>
+                        <p>Essential positioning tips for support players to maximize impact while staying safe.</p>
+                        <div class="guide-meta">
+                            <span><i class="fas fa-user"></i> By SupportPro</span>
+                            <span><i class="fas fa-eye"></i> 9.5K views</span>
+                            <span><i class="fas fa-star"></i> 4.6/5</span>
+                        </div>
+                        <div class="guide-tags">
+                            <span class="tag support">Support</span>
+                            <span class="tag beginner">Beginner</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">Read Guide</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Guides Section -->
+    <section class="hero-guides-section">
+        <div class="container">
+            <h2 class="section-title">Hero Guides</h2>
+            <p class="section-subtitle">Comprehensive guides for every hero in Dota 2</p>
+            
+            <!-- Guide Filters -->
+            <div class="guide-filters">
+                <div class="filter-group">
+                    <label for="role-filter"><i class="fas fa-users"></i> Role</label>
+                    <select class="filter-select" id="role-filter">
+                        <option value="">All Roles</option>
+                        <option value="carry">Carry</option>
+                        <option value="support">Support</option>
+                        <option value="mid">Mid</option>
+                        <option value="offlane">Offlane</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="difficulty-filter"><i class="fas fa-brain"></i> Difficulty</label>
+                    <select class="filter-select" id="difficulty-filter">
+                        <option value="">All Levels</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="sort-filter"><i class="fas fa-sort"></i> Sort By</label>
+                    <select class="filter-select" id="sort-filter">
+                        <option value="popular">Most Popular</option>
+                        <option value="recent">Recently Updated</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="hero-guides-grid">
+                <div class="hero-guide-card scroll-animate">
+                    <div class="hero-guide-header">
+                        <div class="hero-icon">
+                            <i class="fas fa-user-ninja"></i>
+                        </div>
+                        <div class="hero-info">
+                            <h3>Phantom Assassin</h3>
+                            <span class="hero-role">Carry</span>
+                        </div>
+                        <div class="guide-stats">
+                            <span class="stat"><i class="fas fa-eye"></i> 15.2K</span>
+                            <span class="stat"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                    </div>
+                    <div class="guide-preview">
+                        <h4>Complete PA Guide</h4>
+                        <p>Learn farming patterns, item builds, and teamfight positioning for maximum impact.</p>
+                        <div class="guide-features">
+                            <span><i class="fas fa-check"></i> Item Builds</span>
+                            <span><i class="fas fa-check"></i> Farming Guide</span>
+                            <span><i class="fas fa-check"></i> Counters</span>
+                        </div>
+                    </div>
+                    <div class="guide-actions">
+                        <a href="#" class="btn btn-primary">Read Guide</a>
+                        <button class="btn btn-outline"><i class="fas fa-bookmark"></i></button>
+                    </div>
+                </div>
+                
+                <div class="hero-guide-card scroll-animate">
+                    <div class="hero-guide-header">
+                        <div class="hero-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="hero-info">
+                            <h3>Invoker</h3>
+                            <span class="hero-role">Mid</span>
+                        </div>
+                        <div class="guide-stats">
+                            <span class="stat"><i class="fas fa-eye"></i> 12.8K</span>
+                            <span class="stat"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                    </div>
+                    <div class="guide-preview">
+                        <h4>Spell Combinations Mastery</h4>
+                        <p>Master the complex spell system and learn optimal combinations for every situation.</p>
+                        <div class="guide-features">
+                            <span><i class="fas fa-check"></i> Spell Combos</span>
+                            <span><i class="fas fa-check"></i> Build Orders</span>
+                            <span><i class="fas fa-check"></i> Advanced Tips</span>
+                        </div>
+                    </div>
+                    <div class="guide-actions">
+                        <a href="#" class="btn btn-primary">Read Guide</a>
+                        <button class="btn btn-outline"><i class="fas fa-bookmark"></i></button>
+                    </div>
+                </div>
+                
+                <div class="hero-guide-card scroll-animate">
+                    <div class="hero-guide-header">
+                        <div class="hero-icon">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <div class="hero-info">
+                            <h3>Crystal Maiden</h3>
+                            <span class="hero-role">Support</span>
+                        </div>
+                        <div class="guide-stats">
+                            <span class="stat"><i class="fas fa-eye"></i> 9.5K</span>
+                            <span class="stat"><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                    </div>
+                    <div class="guide-preview">
+                        <h4>Support Fundamentals</h4>
+                        <p>Essential support mechanics, warding, and team coordination strategies.</p>
+                        <div class="guide-features">
+                            <span><i class="fas fa-check"></i> Warding Guide</span>
+                            <span><i class="fas fa-check"></i> Positioning</span>
+                            <span><i class="fas fa-check"></i> Team Play</span>
+                        </div>
+                    </div>
+                    <div class="guide-actions">
+                        <a href="#" class="btn btn-primary">Read Guide</a>
+                        <button class="btn btn-outline"><i class="fas fa-bookmark"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Guides Section -->
+    <section class="strategy-guides-section">
+        <div class="container">
+            <h2 class="section-title">Strategy Guides</h2>
+            <p class="section-subtitle">Advanced gameplay strategies and meta analysis</p>
+            
+            <div class="strategy-grid">
+                <div class="strategy-card scroll-animate-left">
+                    <div class="strategy-icon">
+                        <i class="fas fa-chess-board"></i>
+                    </div>
+                    <h3>Drafting Strategy</h3>
+                    <p>Master the art of hero drafting and counter-picking to gain advantages before the game starts.</p>
+                    <div class="strategy-topics">
+                        <span class="topic">Hero Synergies</span>
+                        <span class="topic">Counter Picks</span>
+                        <span class="topic">Meta Analysis</span>
+                    </div>
+                    <div class="strategy-meta">
+                        <span><i class="fas fa-clock"></i> 45 min read</span>
+                        <span><i class="fas fa-user"></i> By DraftMaster</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Read Strategy</a>
+                </div>
+                
+                <div class="strategy-card scroll-animate">
+                    <div class="strategy-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3>Map Control</h3>
+                    <p>Learn how to control the map, secure objectives, and create space for your team.</p>
+                    <div class="strategy-topics">
+                        <span class="topic">Warding</span>
+                        <span class="topic">Objective Control</span>
+                        <span class="topic">Space Creation</span>
+                    </div>
+                    <div class="strategy-meta">
+                        <span><i class="fas fa-clock"></i> 32 min read</span>
+                        <span><i class="fas fa-user"></i> By MapControl</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Read Strategy</a>
+                </div>
+                
+                <div class="strategy-card scroll-animate-right">
+                    <div class="strategy-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Team Coordination</h3>
+                    <p>Improve team communication and coordination for better teamfight execution.</p>
+                    <div class="strategy-topics">
+                        <span class="topic">Communication</span>
+                        <span class="topic">Teamfighting</span>
+                        <span class="topic">Leadership</span>
+                    </div>
+                    <div class="strategy-meta">
+                        <span><i class="fas fa-clock"></i> 28 min read</span>
+                        <span><i class="fas fa-user"></i> By TeamCaptain</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Read Strategy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beginner Guides Section -->
+    <section class="beginner-guides-section">
+        <div class="container">
+            <h2 class="section-title">Beginner Guides</h2>
+            <p class="section-subtitle">Essential tutorials and tips for new Dota 2 players</p>
+            
+            <div class="beginner-grid">
+                <div class="beginner-card scroll-animate">
+                    <div class="beginner-icon">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <h3>Getting Started</h3>
+                    <p>Complete beginner's guide to Dota 2 basics, controls, and first steps.</p>
+                    <ul class="beginner-topics">
+                        <li><i class="fas fa-check"></i> Basic Controls</li>
+                        <li><i class="fas fa-check"></i> Hero Selection</li>
+                        <li><i class="fas fa-check"></i> First Game Tips</li>
+                    </ul>
+                    <div class="difficulty">
+                        <span class="difficulty-label">Difficulty:</span>
+                        <span class="difficulty-level beginner">Beginner</span>
+                    </div>
+                    <a href="#" class="btn btn-outline">Start Learning</a>
+                </div>
+                
+                <div class="beginner-card scroll-animate">
+                    <div class="beginner-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Economy Management</h3>
+                    <p>Learn how to manage gold, buy items, and understand the economy system.</p>
+                    <ul class="beginner-topics">
+                        <li><i class="fas fa-check"></i> Gold Farming</li>
+                        <li><i class="fas fa-check"></i> Item Purchases</li>
+                        <li><i class="fas fa-check"></i> Resource Management</li>
+                    </ul>
+                    <div class="difficulty">
+                        <span class="difficulty-label">Difficulty:</span>
+                        <span class="difficulty-level beginner">Beginner</span>
+                    </div>
+                    <a href="#" class="btn btn-outline">Start Learning</a>
+                </div>
+                
+                <div class="beginner-card scroll-animate">
+                    <div class="beginner-icon">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <h3>Combat Basics</h3>
+                    <p>Master basic combat mechanics, positioning, and survival techniques.</p>
+                    <ul class="beginner-topics">
+                        <li><i class="fas fa-check"></i> Attack Mechanics</li>
+                        <li><i class="fas fa-check"></i> Positioning</li>
+                        <li><i class="fas fa-check"></i> Survival Tips</li>
+                    </ul>
+                    <div class="difficulty">
+                        <span class="difficulty-label">Difficulty:</span>
+                        <span class="difficulty-level beginner">Beginner</span>
+                    </div>
+                    <a href="#" class="btn btn-outline">Start Learning</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pro Tips Section -->
+    <section class="pro-tips-section">
+        <div class="container">
+            <h2 class="section-title">Pro Tips & Tricks</h2>
+            <p class="section-subtitle">Advanced techniques and secrets from professional players</p>
+            
+            <div class="pro-tips-grid">
+                <div class="pro-tip-card scroll-animate">
+                    <div class="tip-header">
+                        <div class="tip-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="tip-author">
+                            <span class="author-name">ProPlayer123</span>
+                            <span class="author-rank">Immortal</span>
+                        </div>
+                    </div>
+                    <h3>Advanced Farming Patterns</h3>
+                    <p>Optimize your farming efficiency with these advanced techniques used by professional players.</p>
+                    <div class="tip-content">
+                        <div class="tip-point">
+                            <span class="point-number">1</span>
+                            <span class="point-text">Stack camps efficiently during downtime</span>
+                        </div>
+                        <div class="tip-point">
+                            <span class="point-number">2</span>
+                            <span class="point-text">Use creep aggro to manipulate lane equilibrium</span>
+                        </div>
+                        <div class="tip-point">
+                            <span class="point-number">3</span>
+                            <span class="point-text">Time your farming with objective spawns</span>
+                        </div>
+                    </div>
+                    <div class="tip-stats">
+                        <span><i class="fas fa-thumbs-up"></i> 2.3K likes</span>
+                        <span><i class="fas fa-comment"></i> 156 comments</span>
+                    </div>
+                </div>
+                
+                <div class="pro-tip-card scroll-animate">
+                    <div class="tip-header">
+                        <div class="tip-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="tip-author">
+                            <span class="author-name">MindGamer</span>
+                            <span class="author-rank">Divine</span>
+                        </div>
+                    </div>
+                    <h3>Psychological Warfare</h3>
+                    <p>Master the mental game and use psychological tactics to gain advantages over opponents.</p>
+                    <div class="tip-content">
+                        <div class="tip-point">
+                            <span class="point-number">1</span>
+                            <span class="point-text">Use all-chat strategically to tilt opponents</span>
+                        </div>
+                        <div class="tip-point">
+                            <span class="point-number">2</span>
+                            <span class="point-text">Create pressure through aggressive positioning</span>
+                        </div>
+                        <div class="tip-point">
+                            <span class="point-number">3</span>
+                            <span class="point-text">Maintain positive team morale</span>
+                        </div>
+                    </div>
+                    <div class="tip-stats">
+                        <span><i class="fas fa-thumbs-up"></i> 1.8K likes</span>
+                        <span><i class="fas fa-comment"></i> 89 comments</span>
+                    </div>
+                </div>
+                
+                <div class="pro-tip-card scroll-animate">
+                    <div class="tip-header">
+                        <div class="tip-icon">
+                            <i class="fas fa-target"></i>
+                        </div>
+                        <div class="tip-author">
+                            <span class="author-name">AimMaster</span>
+                            <span class="author-rank">Immortal</span>
+                        </div>
+                    </div>
+                    <h3>Skill Shot Mastery</h3>
+                    <p>Improve your accuracy and timing with skill shots and projectile abilities.</p>
+                    <div class="tip-content">
+                        <div class="tip-point">
+                            <span class="point-number">1</span>
+                            <span class="point-text">Lead your targets based on movement patterns</span>
+                        </div>
+                        <div class="tip-point">
+                            <span class="point-number">2</span>
+                            <span class="point-text">Use terrain and obstacles to your advantage</span>
+                        </div>
+                        <div class="tip-point">
+                            <span class="point-number">3</span>
+                            <span class="point-text">Practice prediction and reaction timing</span>
+                        </div>
+                    </div>
+                    <div class="tip-stats">
+                        <span><i class="fas fa-thumbs-up"></i> 2.1K likes</span>
+                        <span><i class="fas fa-comment"></i> 124 comments</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Dota Heroes. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-gamepad"></i> Dota Heroes</h3>
+                    <p>Your ultimate guide to mastering Dota 2 heroes. Comprehensive strategies, builds, and meta analysis to help you climb the ranks.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-reddit"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="heroes.html"><i class="fas fa-users"></i> All Heroes</a></li>
+                        <li><a href="meta.html"><i class="fas fa-chart-line"></i> Meta Analysis</a></li>
+                        <li><a href="guides.html"><i class="fas fa-book"></i> Strategy Guides</a></li>
+                        <li><a href="tournaments.html"><i class="fas fa-trophy"></i> Tournaments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-tools"></i> Resources</h4>
+                    <ul>
+                        <li><a href="news.html"><i class="fas fa-newspaper"></i> Latest News</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-shield-alt"></i> Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html"><i class="fas fa-user-shield"></i> Privacy Policy</a></li>
+                        <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                        <li><a href="sitemap.html"><i class="fas fa-sitemap"></i> Sitemap</a></li>
+                        <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dota Heroes. All rights reserved. Not affiliated with Valve Corporation.</p>
+                <p>Dota 2 is a registered trademark of Valve Corporation.</p>
+            </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>
