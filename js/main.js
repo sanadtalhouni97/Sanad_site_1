@@ -81,26 +81,46 @@ function initializeAnimations() {
                         }, index * 100);
                     });
                 }
+                
+                // Add counter animation for statistics
+                if (entry.target.classList.contains('stat-item')) {
+                    animateCounter(entry.target);
+                }
             }
         });
     }, observerOptions);
 
     // Observe all animation elements
-    document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale, .stagger-container').forEach(el => {
+    document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale, .stagger-container, .stat-item').forEach(el => {
         observer.observe(el);
     });
 
-    // Enhanced floating icons parallax
+    // Enhanced floating icons parallax with more dynamic movement
     const floatingIcons = document.querySelectorAll('.floating-icon');
     window.addEventListener('scroll', throttle(() => {
         const scrolled = window.pageYOffset;
-        floatingIcons.forEach(icon => {
-            const speed = parseFloat(icon.getAttribute('data-speed')) || 1;
-            const yPos = -(scrolled * speed * 0.3);
-            const xPos = Math.sin(scrolled * 0.001) * 20;
-            icon.style.transform = `translate(${xPos}px, ${yPos}px)`;
+        floatingIcons.forEach((icon, index) => {
+            const speed = parseFloat(icon.getAttribute('data-speed')) || 0.5;
+            const yPos = -(scrolled * speed * 0.2);
+            const xPos = Math.sin(scrolled * 0.001 + index * 0.5) * 30;
+            const rotation = scrolled * 0.02 + index * 10;
+            
+            icon.style.transform = `translate(${xPos}px, ${yPos}px) rotate(${rotation}deg)`;
         });
     }, 16));
+
+    // Add hover effects to floating icons
+    floatingIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', () => {
+            icon.style.transform = 'scale(1.2) rotate(360deg)';
+            icon.style.filter = 'drop-shadow(0 0 20px var(--accent-soft))';
+        });
+        
+        icon.addEventListener('mouseleave', () => {
+            icon.style.transform = '';
+            icon.style.filter = '';
+        });
+    });
 
     // Enhanced counter animation for stats
     const statNumbers = document.querySelectorAll('.stat-content h3');
@@ -125,6 +145,27 @@ function initializeAnimations() {
 
         statsObserver.observe(statsSection);
     }
+}
+
+// Counter animation function
+function animateCounter(element, target) {
+    const duration = 2000;
+    const start = 0;
+    const increment = target / (duration / 16);
+    let current = start;
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        
+        const displayValue = Math.floor(current);
+        const originalText = element.textContent;
+        const suffix = originalText.replace(/\d+/g, '');
+        element.textContent = displayValue + suffix;
+    }, 16);
 }
 
 // Enhanced Mouse Effects
