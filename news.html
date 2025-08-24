@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News - Dota 2 Heroes</title>
+    <title>News - Latest Dota 2 Updates, Patch Notes & Community News</title>
+    <meta name="description" content="Stay updated with the latest Dota 2 news, patch notes, tournament updates, and community content. Get breaking news and in-depth analysis.">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/animations.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Floating Background Icons -->
+    <div class="floating-icons">
+        <div class="floating-icon" data-speed="2"><i class="fas fa-newspaper"></i></div>
+        <div class="floating-icon" data-speed="1.5"><i class="fas fa-bell"></i></div>
+        <div class="floating-icon" data-speed="3"><i class="fas fa-broadcast-tower"></i></div>
+        <div class="floating-icon" data-speed="2.5"><i class="fas fa-rss"></i></div>
+        <div class="floating-icon" data-speed="1.8"><i class="fas fa-megaphone"></i></div>
+        <div class="floating-icon" data-speed="2.2"><i class="fas fa-bullhorn"></i></div>
+        <div class="floating-icon" data-speed="1.2"><i class="fas fa-info-circle"></i></div>
+        <div class="floating-icon" data-speed="2.8"><i class="fas fa-exclamation-triangle"></i></div>
+    </div>
+
+    <!-- Enhanced Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -17,12 +31,12 @@
                 <span>Dota Heroes</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="heroes.html">Heroes</a></li>
-                <li><a href="meta.html">Meta</a></li>
-                <li><a href="guides.html">Guides</a></li>
-                <li><a href="tournaments.html">Tournaments</a></li>
-                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="heroes.html"><i class="fas fa-users"></i> Heroes</a></li>
+                <li><a href="meta.html"><i class="fas fa-chart-line"></i> Meta</a></li>
+                <li><a href="guides.html"><i class="fas fa-book"></i> Guides</a></li>
+                <li><a href="tournaments.html"><i class="fas fa-trophy"></i> Tournaments</a></li>
+                <li><a href="news.html" class="active"><i class="fas fa-newspaper"></i> News</a></li>
             </ul>
             <div class="nav-toggle">
                 <span></span>
@@ -32,19 +46,450 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <h1 class="hero-title">News</h1>
-            <p class="hero-subtitle">Latest Dota 2 news and updates</p>
+            <h1 class="hero-title">Latest News</h1>
+            <p class="hero-subtitle">Stay updated with the latest Dota 2 news, patch notes, tournament updates, and community content</p>
+            
+            <!-- News Categories -->
+            <div class="news-categories">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-globe"></i> All News
+                </button>
+                <button class="category-btn" data-category="patches">
+                    <i class="fas fa-tools"></i> Patch Notes
+                </button>
+                <button class="category-btn" data-category="tournaments">
+                    <i class="fas fa-trophy"></i> Tournaments
+                </button>
+                <button class="category-btn" data-category="esports">
+                    <i class="fas fa-gamepad"></i> Esports
+                </button>
+                <button class="category-btn" data-category="community">
+                    <i class="fas fa-users"></i> Community
+                </button>
+            </div>
         </div>
     </section>
 
+    <!-- Featured News Section -->
+    <section class="featured-news-section">
+        <div class="container">
+            <h2 class="section-title">Featured News</h2>
+            <p class="section-subtitle">Breaking news and important updates</p>
+            
+            <div class="featured-news-grid">
+                <div class="featured-article scroll-animate">
+                    <div class="article-image">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category patch">Patch Notes</span>
+                            <span class="date"><i class="fas fa-clock"></i> 2 hours ago</span>
+                        </div>
+                        <h3>Dota 2 Patch 7.35b Released - Major Balance Changes</h3>
+                        <p>Valve has released the latest patch with significant balance changes affecting over 20 heroes. Phantom Assassin receives nerfs while support heroes get buffs.</p>
+                        <div class="article-stats">
+                            <span><i class="fas fa-eye"></i> 45.2K views</span>
+                            <span><i class="fas fa-comment"></i> 1.2K comments</span>
+                            <span><i class="fas fa-share"></i> 856 shares</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Read Full Article</a>
+                    </div>
+                </div>
+                
+                <div class="featured-article scroll-animate">
+                    <div class="article-image">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category tournament">Tournament</span>
+                            <span class="date"><i class="fas fa-clock"></i> 5 hours ago</span>
+                        </div>
+                        <h3>The International 2024 Prize Pool Breaks $25 Million</h3>
+                        <p>The community has once again shattered records as The International 2024 prize pool reaches unprecedented heights, making it the largest esports tournament ever.</p>
+                        <div class="article-stats">
+                            <span><i class="fas fa-eye"></i> 38.7K views</span>
+                            <span><i class="fas fa-comment"></i> 2.1K comments</span>
+                            <span><i class="fas fa-share"></i> 1.2K shares</span>
+                        </div>
+                        <a href="#" class="btn btn-primary">Read Full Article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="latest-news-section">
+        <div class="container">
+            <h2 class="section-title">Latest News</h2>
+            <p class="section-subtitle">Recent updates and announcements</p>
+            
+            <div class="news-grid">
+                <article class="news-card scroll-animate">
+                    <div class="news-image">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="category esports">Esports</span>
+                            <span class="date">6 hours ago</span>
+                        </div>
+                        <h3>Team Spirit Announces New Roster Changes</h3>
+                        <p>The reigning TI champions have made significant roster changes ahead of the new season, bringing in fresh talent to maintain their dominance.</p>
+                        <div class="news-footer">
+                            <span class="author">By EsportsReporter</span>
+                            <span class="read-time">5 min read</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="news-card scroll-animate">
+                    <div class="news-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="category community">Community</span>
+                            <span class="date">8 hours ago</span>
+                        </div>
+                        <h3>Community Workshop Winners Announced</h3>
+                        <p>Valve has announced the winners of the latest community workshop contest, with amazing new cosmetic items coming to the game.</p>
+                        <div class="news-footer">
+                            <span class="author">By CommunityManager</span>
+                            <span class="read-time">3 min read</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="news-card scroll-animate">
+                    <div class="news-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="category meta">Meta Analysis</span>
+                            <span class="date">12 hours ago</span>
+                        </div>
+                        <h3>Meta Shift: Support Heroes Rise in Popularity</h3>
+                        <p>Recent tournament data shows a significant shift towards support-focused strategies, with utility heroes becoming more valuable than ever.</p>
+                        <div class="news-footer">
+                            <span class="author">By MetaAnalyst</span>
+                            <span class="read-time">7 min read</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="news-card scroll-animate">
+                    <div class="news-image">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="category patch">Bug Fixes</span>
+                            <span class="date">1 day ago</span>
+                        </div>
+                        <h3>Critical Bug Fixes in Latest Hotfix</h3>
+                        <p>Valve has released a hotfix addressing several critical bugs that were affecting gameplay, including the infamous Invoker spell bug.</p>
+                        <div class="news-footer">
+                            <span class="author">By DevTeam</span>
+                            <span class="read-time">2 min read</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="news-card scroll-animate">
+                    <div class="news-image">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="category tournament">Tournament</span>
+                            <span class="date">1 day ago</span>
+                        </div>
+                        <h3>ESL One Birmingham 2024: Complete Results</h3>
+                        <p>Team Spirit emerges victorious at ESL One Birmingham, defeating PSG.LGD in an epic 5-game series that went down to the wire.</p>
+                        <div class="news-footer">
+                            <span class="author">By TournamentReporter</span>
+                            <span class="read-time">6 min read</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="news-card scroll-animate">
+                    <div class="news-image">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="category community">Community</span>
+                            <span class="date">2 days ago</span>
+                        </div>
+                        <h3>Dota 2 Community Reaches 10 Million Active Players</h3>
+                        <p>The Dota 2 community continues to grow as the game reaches a new milestone with 10 million active players worldwide.</p>
+                        <div class="news-footer">
+                            <span class="author">By CommunityStats</span>
+                            <span class="read-time">4 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patch Notes Section -->
+    <section class="patch-notes-section">
+        <div class="container">
+            <h2 class="section-title">Latest Patch Notes</h2>
+            <p class="section-subtitle">Detailed breakdown of recent game updates</p>
+            
+            <div class="patch-notes-grid">
+                <div class="patch-card scroll-animate">
+                    <div class="patch-header">
+                        <h3>Patch 7.35b</h3>
+                        <span class="patch-date">December 15, 2024</span>
+                        <span class="patch-type major">Major Update</span>
+                    </div>
+                    <div class="patch-summary">
+                        <p>This patch brings significant balance changes to address the current meta and improve game balance.</p>
+                    </div>
+                    <div class="patch-changes">
+                        <div class="change-category">
+                            <h4><i class="fas fa-sword"></i> Hero Changes</h4>
+                            <ul>
+                                <li>Phantom Assassin: Coup de Grace crit chance reduced from 15% to 12%</li>
+                                <li>Invoker: Alacrity mana cost increased from 100 to 120</li>
+                                <li>Crystal Maiden: Frostbite duration increased from 1.5s to 2s</li>
+                            </ul>
+                        </div>
+                        <div class="change-category">
+                            <h4><i class="fas fa-shield"></i> Item Changes</h4>
+                            <ul>
+                                <li>Black King Bar: Duration reduced from 10s to 9s</li>
+                                <li>Blink Dagger: Cooldown reduced from 15s to 12s</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline">View Full Patch Notes</a>
+                </div>
+                
+                <div class="patch-card scroll-animate">
+                    <div class="patch-header">
+                        <h3>Patch 7.35a</h3>
+                        <span class="patch-date">December 10, 2024</span>
+                        <span class="patch-type minor">Minor Update</span>
+                    </div>
+                    <div class="patch-summary">
+                        <p>Bug fixes and minor balance adjustments to improve game stability.</p>
+                    </div>
+                    <div class="patch-changes">
+                        <div class="change-category">
+                            <h4><i class="fas fa-bug"></i> Bug Fixes</h4>
+                            <ul>
+                                <li>Fixed Invoker spell combination bug</li>
+                                <li>Resolved Phantom Assassin blur visual issue</li>
+                                <li>Fixed item tooltip display problems</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline">View Full Patch Notes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Highlights Section -->
+    <section class="community-highlights-section">
+        <div class="container">
+            <h2 class="section-title">Community Highlights</h2>
+            <p class="section-subtitle">Amazing plays, memes, and community content</p>
+            
+            <div class="community-grid">
+                <div class="community-card scroll-animate">
+                    <div class="community-image">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="community-content">
+                        <h3>Epic 1v5 Team Wipe by Miracle-</h3>
+                        <p>Watch as Miracle- pulls off an incredible 1v5 team wipe with Phantom Assassin in a professional match.</p>
+                        <div class="community-meta">
+                            <span class="views">2.1M views</span>
+                            <span class="likes">45K likes</span>
+                            <span class="category">Pro Play</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="community-card scroll-animate">
+                    <div class="community-image">
+                        <i class="fas fa-laugh"></i>
+                    </div>
+                    <div class="community-content">
+                        <h3>Best Dota 2 Memes of the Week</h3>
+                        <p>A compilation of the funniest Dota 2 memes and jokes from the community this week.</p>
+                        <div class="community-meta">
+                            <span class="views">850K views</span>
+                            <span class="likes">23K likes</span>
+                            <span class="category">Memes</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="community-card scroll-animate">
+                    <div class="community-image">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="community-content">
+                        <h3>Amazing Fan Art: Invoker Cosplay</h3>
+                        <p>Incredible cosplay of Invoker by a talented community member, featuring all the intricate details.</p>
+                        <div class="community-meta">
+                            <span class="views">320K views</span>
+                            <span class="likes">12K likes</span>
+                            <span class="category">Fan Art</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Topics Section -->
+    <section class="trending-topics-section">
+        <div class="container">
+            <h2 class="section-title">Trending Topics</h2>
+            <p class="section-subtitle">What the community is talking about</p>
+            
+            <div class="trending-grid">
+                <div class="trending-topic scroll-animate">
+                    <div class="topic-header">
+                        <span class="topic-rank">#1</span>
+                        <span class="topic-tag">#PhantomAssassinNerf</span>
+                        <span class="topic-posts">15.2K posts</span>
+                    </div>
+                    <p>Community reaction to the latest Phantom Assassin nerfs in patch 7.35b</p>
+                </div>
+                
+                <div class="trending-topic scroll-animate">
+                    <div class="topic-header">
+                        <span class="topic-rank">#2</span>
+                        <span class="topic-tag">#TI2024PrizePool</span>
+                        <span class="topic-posts">12.8K posts</span>
+                    </div>
+                    <p>Discussion about The International 2024 reaching $25 million prize pool</p>
+                </div>
+                
+                <div class="trending-topic scroll-animate">
+                    <div class="topic-header">
+                        <span class="topic-rank">#3</span>
+                        <span class="topic-tag">#TeamSpiritRoster</span>
+                        <span class="topic-posts">8.9K posts</span>
+                    </div>
+                    <p>Speculation about Team Spirit's new roster changes and their impact</p>
+                </div>
+                
+                <div class="trending-topic scroll-animate">
+                    <div class="topic-header">
+                        <span class="topic-rank">#4</span>
+                        <span class="topic-tag">#SupportMeta</span>
+                        <span class="topic-posts">6.7K posts</span>
+                    </div>
+                    <p>Analysis of the current support-focused meta and its implications</p>
+                </div>
+                
+                <div class="trending-topic scroll-animate">
+                    <div class="topic-header">
+                        <span class="topic-rank">#5</span>
+                        <span class="topic-tag">#NewHeroSpeculation</span>
+                        <span class="topic-posts">5.4K posts</span>
+                    </div>
+                    <p>Community theories about the next hero to be added to Dota 2</p>
+                </div>
+                
+                <div class="trending-topic scroll-animate">
+                    <div class="topic-header">
+                        <span class="topic-rank">#6</span>
+                        <span class="topic-tag">#ESLBirmingham</span>
+                        <span class="topic-posts">4.2K posts</span>
+                    </div>
+                    <p>Discussion about the recent ESL One Birmingham tournament results</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter to get the latest Dota 2 news, patch notes, and tournament updates delivered to your inbox.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" class="newsletter-input">
+                    <button class="btn btn-primary">Subscribe</button>
+                </div>
+                <div class="newsletter-features">
+                    <span><i class="fas fa-check"></i> Weekly news digest</span>
+                    <span><i class="fas fa-check"></i> Patch notes alerts</span>
+                    <span><i class="fas fa-check"></i> Tournament updates</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Dota Heroes. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-gamepad"></i> Dota Heroes</h3>
+                    <p>Your ultimate guide to mastering Dota 2 heroes. Comprehensive strategies, builds, and meta analysis to help you climb the ranks.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-reddit"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="heroes.html"><i class="fas fa-users"></i> All Heroes</a></li>
+                        <li><a href="meta.html"><i class="fas fa-chart-line"></i> Meta Analysis</a></li>
+                        <li><a href="guides.html"><i class="fas fa-book"></i> Strategy Guides</a></li>
+                        <li><a href="tournaments.html"><i class="fas fa-trophy"></i> Tournaments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-tools"></i> Resources</h4>
+                    <ul>
+                        <li><a href="news.html"><i class="fas fa-newspaper"></i> Latest News</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-shield-alt"></i> Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html"><i class="fas fa-user-shield"></i> Privacy Policy</a></li>
+                        <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                        <li><a href="sitemap.html"><i class="fas fa-sitemap"></i> Sitemap</a></li>
+                        <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dota Heroes. All rights reserved. Not affiliated with Valve Corporation.</p>
+                <p>Dota 2 is a registered trademark of Valve Corporation.</p>
+            </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>

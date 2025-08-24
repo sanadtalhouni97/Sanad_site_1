@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tournaments - Dota 2 Heroes</title>
+    <title>Tournaments - Dota 2 Professional Tournaments & Events</title>
+    <meta name="description" content="Stay updated with the latest Dota 2 tournaments, professional events, prize pools, schedules, and results. Follow your favorite teams and players.">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/animations.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Floating Background Icons -->
+    <div class="floating-icons">
+        <div class="floating-icon" data-speed="2"><i class="fas fa-trophy"></i></div>
+        <div class="floating-icon" data-speed="1.5"><i class="fas fa-medal"></i></div>
+        <div class="floating-icon" data-speed="3"><i class="fas fa-crown"></i></div>
+        <div class="floating-icon" data-speed="2.5"><i class="fas fa-star"></i></div>
+        <div class="floating-icon" data-speed="1.8"><i class="fas fa-fire"></i></div>
+        <div class="floating-icon" data-speed="2.2"><i class="fas fa-bolt"></i></div>
+        <div class="floating-icon" data-speed="1.2"><i class="fas fa-gem"></i></div>
+        <div class="floating-icon" data-speed="2.8"><i class="fas fa-dragon"></i></div>
+    </div>
+
+    <!-- Enhanced Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -17,12 +31,12 @@
                 <span>Dota Heroes</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="heroes.html">Heroes</a></li>
-                <li><a href="meta.html">Meta</a></li>
-                <li><a href="guides.html">Guides</a></li>
-                <li><a href="tournaments.html" class="active">Tournaments</a></li>
-                <li><a href="news.html">News</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="heroes.html"><i class="fas fa-users"></i> Heroes</a></li>
+                <li><a href="meta.html"><i class="fas fa-chart-line"></i> Meta</a></li>
+                <li><a href="guides.html"><i class="fas fa-book"></i> Guides</a></li>
+                <li><a href="tournaments.html" class="active"><i class="fas fa-trophy"></i> Tournaments</a></li>
+                <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
             </ul>
             <div class="nav-toggle">
                 <span></span>
@@ -32,19 +46,689 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <h1 class="hero-title">Tournaments</h1>
-            <p class="hero-subtitle">Latest tournament results and schedules</p>
+            <p class="hero-subtitle">Stay updated with the latest Dota 2 professional tournaments, events, and competitive action</p>
+            
+            <!-- Tournament Stats -->
+            <div class="tournament-stats-overview">
+                <div class="stat-card scroll-animate">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Active Tournaments</h3>
+                        <span class="stat-number">12</span>
+                        <p>Currently running events</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card scroll-animate">
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Total Prize Pool</h3>
+                        <span class="stat-number">$45.2M</span>
+                        <p>This year's total prizes</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card scroll-animate">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Teams Competing</h3>
+                        <span class="stat-number">156</span>
+                        <p>Professional teams</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card scroll-animate">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Upcoming Events</h3>
+                        <span class="stat-number">8</span>
+                        <p>Scheduled tournaments</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Featured Tournament Section -->
+    <section class="featured-tournament-section">
+        <div class="container">
+            <h2 class="section-title">Featured Tournament</h2>
+            <p class="section-subtitle">The International 2024 - The biggest Dota 2 tournament of the year</p>
+            
+            <div class="featured-tournament">
+                <div class="tournament-banner">
+                    <div class="tournament-info">
+                        <h3>The International 2024</h3>
+                        <div class="tournament-details">
+                            <span><i class="fas fa-calendar"></i> August 15-25, 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Seattle, Washington</span>
+                            <span><i class="fas fa-dollar-sign"></i> $25,000,000 Prize Pool</span>
+                            <span><i class="fas fa-users"></i> 18 Teams</span>
+                        </div>
+                        <div class="tournament-status">
+                            <span class="status-badge live">Live Now</span>
+                            <span class="viewers"><i class="fas fa-eye"></i> 2.3M viewers</span>
+                        </div>
+                    </div>
+                    <div class="tournament-actions">
+                        <a href="#" class="btn btn-primary"><i class="fas fa-play"></i> Watch Live</a>
+                        <a href="#" class="btn btn-outline"><i class="fas fa-info-circle"></i> Tournament Info</a>
+                    </div>
+                </div>
+                
+                <!-- Current Match -->
+                <div class="current-match">
+                    <h4><i class="fas fa-gamepad"></i> Current Match</h4>
+                    <div class="match-card">
+                        <div class="team team-left">
+                            <div class="team-logo">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="team-info">
+                                <h5>Team Spirit</h5>
+                                <span class="team-score">2</span>
+                            </div>
+                        </div>
+                        <div class="match-info">
+                            <span class="match-time">Game 3</span>
+                            <span class="match-status">Live</span>
+                        </div>
+                        <div class="team team-right">
+                            <div class="team-info">
+                                <h5>PSG.LGD</h5>
+                                <span class="team-score">1</span>
+                            </div>
+                            <div class="team-logo">
+                                <i class="fas fa-dragon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Active Tournaments Section -->
+    <section class="active-tournaments-section">
+        <div class="container">
+            <h2 class="section-title">Active Tournaments</h2>
+            <p class="section-subtitle">Currently running tournaments and their progress</p>
+            
+            <div class="tournaments-grid">
+                <div class="tournament-card active scroll-animate">
+                    <div class="tournament-header">
+                        <div class="tournament-logo">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="tournament-info">
+                            <h3>ESL One Birmingham 2024</h3>
+                            <span class="tournament-type">Major Tournament</span>
+                        </div>
+                        <div class="tournament-status">
+                            <span class="status-badge live">Live</span>
+                        </div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="detail-item">
+                            <span class="label">Prize Pool:</span>
+                            <span class="value">$1,000,000</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Teams:</span>
+                            <span class="value">12</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Format:</span>
+                            <span class="value">Double Elimination</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Location:</span>
+                            <span class="value">Birmingham, UK</span>
+                        </div>
+                    </div>
+                    <div class="tournament-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                        <span class="progress-text">75% Complete</span>
+                    </div>
+                    <div class="tournament-actions">
+                        <a href="#" class="btn btn-primary">Watch Live</a>
+                        <a href="#" class="btn btn-outline">Bracket</a>
+                    </div>
+                </div>
+                
+                <div class="tournament-card active scroll-animate">
+                    <div class="tournament-header">
+                        <div class="tournament-logo">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="tournament-info">
+                            <h3>DreamLeague Season 22</h3>
+                            <span class="tournament-type">League</span>
+                        </div>
+                        <div class="tournament-status">
+                            <span class="status-badge live">Live</span>
+                        </div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="detail-item">
+                            <span class="label">Prize Pool:</span>
+                            <span class="value">$750,000</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Teams:</span>
+                            <span class="value">16</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Format:</span>
+                            <span class="value">Group Stage + Playoffs</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Location:</span>
+                            <span class="value">Online</span>
+                        </div>
+                    </div>
+                    <div class="tournament-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                        <span class="progress-text">60% Complete</span>
+                    </div>
+                    <div class="tournament-actions">
+                        <a href="#" class="btn btn-primary">Watch Live</a>
+                        <a href="#" class="btn btn-outline">Standings</a>
+                    </div>
+                </div>
+                
+                <div class="tournament-card active scroll-animate">
+                    <div class="tournament-header">
+                        <div class="tournament-logo">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <div class="tournament-info">
+                            <h3>PGL Arlington Major</h3>
+                            <span class="tournament-type">Major Tournament</span>
+                        </div>
+                        <div class="tournament-status">
+                            <span class="status-badge live">Live</span>
+                        </div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="detail-item">
+                            <span class="label">Prize Pool:</span>
+                            <span class="value">$500,000</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Teams:</span>
+                            <span class="value">8</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Format:</span>
+                            <span class="value">Single Elimination</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Location:</span>
+                            <span class="value">Arlington, Texas</span>
+                        </div>
+                    </div>
+                    <div class="tournament-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%"></div>
+                        </div>
+                        <span class="progress-text">40% Complete</span>
+                    </div>
+                    <div class="tournament-actions">
+                        <a href="#" class="btn btn-primary">Watch Live</a>
+                        <a href="#" class="btn btn-outline">Bracket</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Tournaments Section -->
+    <section class="upcoming-tournaments-section">
+        <div class="container">
+            <h2 class="section-title">Upcoming Tournaments</h2>
+            <p class="section-subtitle">Scheduled tournaments and events</p>
+            
+            <div class="upcoming-tournaments-grid">
+                <div class="upcoming-tournament-card scroll-animate">
+                    <div class="tournament-date">
+                        <span class="month">DEC</span>
+                        <span class="day">15</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="tournament-content">
+                        <h3>BTS Pro Series Season 15</h3>
+                        <div class="tournament-meta">
+                            <span><i class="fas fa-dollar-sign"></i> $300,000</span>
+                            <span><i class="fas fa-users"></i> 12 Teams</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Online</span>
+                        </div>
+                        <div class="tournament-description">
+                            <p>Regional qualifiers for the upcoming major tournament featuring top teams from Southeast Asia.</p>
+                        </div>
+                        <div class="tournament-actions">
+                            <button class="btn btn-outline"><i class="fas fa-bell"></i> Set Reminder</button>
+                            <button class="btn btn-primary">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="upcoming-tournament-card scroll-animate">
+                    <div class="tournament-date">
+                        <span class="month">JAN</span>
+                        <span class="day">08</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="tournament-content">
+                        <h3>WePlay AniMajor</h3>
+                        <div class="tournament-meta">
+                            <span><i class="fas fa-dollar-sign"></i> $1,500,000</span>
+                            <span><i class="fas fa-users"></i> 16 Teams</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Kyiv, Ukraine</span>
+                        </div>
+                        <div class="tournament-description">
+                            <p>Major tournament featuring the best teams from around the world competing for DPC points.</p>
+                        </div>
+                        <div class="tournament-actions">
+                            <button class="btn btn-outline"><i class="fas fa-bell"></i> Set Reminder</button>
+                            <button class="btn btn-primary">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="upcoming-tournament-card scroll-animate">
+                    <div class="tournament-date">
+                        <span class="month">FEB</span>
+                        <span class="day">12</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="tournament-content">
+                        <h3>ESL One Katowice 2025</h3>
+                        <div class="tournament-meta">
+                            <span><i class="fas fa-dollar-sign"></i> $1,000,000</span>
+                            <span><i class="fas fa-users"></i> 12 Teams</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Katowice, Poland</span>
+                        </div>
+                        <div class="tournament-description">
+                            <p>Legendary tournament series returns to Katowice with top-tier competitive action.</p>
+                        </div>
+                        <div class="tournament-actions">
+                            <button class="btn btn-outline"><i class="fas fa-bell"></i> Set Reminder</button>
+                            <button class="btn btn-primary">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="upcoming-tournament-card scroll-animate">
+                    <div class="tournament-date">
+                        <span class="month">MAR</span>
+                        <span class="day">05</span>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="tournament-content">
+                        <h3>PGL Major Stockholm</h3>
+                        <div class="tournament-meta">
+                            <span><i class="fas fa-dollar-sign"></i> $2,000,000</span>
+                            <span><i class="fas fa-users"></i> 18 Teams</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Stockholm, Sweden</span>
+                        </div>
+                        <div class="tournament-description">
+                            <p>Major tournament in the heart of Sweden featuring the world's best Dota 2 teams.</p>
+                        </div>
+                        <div class="tournament-actions">
+                            <button class="btn btn-outline"><i class="fas fa-bell"></i> Set Reminder</button>
+                            <button class="btn btn-primary">More Info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Results Section -->
+    <section class="recent-results-section">
+        <div class="container">
+            <h2 class="section-title">Recent Results</h2>
+            <p class="section-subtitle">Latest tournament results and match outcomes</p>
+            
+            <div class="results-grid">
+                <div class="result-card scroll-animate">
+                    <div class="result-header">
+                        <h3>ESL One Birmingham 2024</h3>
+                        <span class="result-date">December 10, 2024</span>
+                    </div>
+                    <div class="match-result">
+                        <div class="team winner">
+                            <div class="team-logo">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="team-info">
+                                <h4>Team Spirit</h4>
+                                <span class="score">3</span>
+                            </div>
+                        </div>
+                        <div class="vs">vs</div>
+                        <div class="team loser">
+                            <div class="team-info">
+                                <h4>PSG.LGD</h4>
+                                <span class="score">1</span>
+                            </div>
+                            <div class="team-logo">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-details">
+                        <span class="tournament-type">Grand Final</span>
+                        <span class="prize-pool">$500,000</span>
+                    </div>
+                </div>
+                
+                <div class="result-card scroll-animate">
+                    <div class="result-header">
+                        <h3>DreamLeague Season 22</h3>
+                        <span class="result-date">December 8, 2024</span>
+                    </div>
+                    <div class="match-result">
+                        <div class="team winner">
+                            <div class="team-logo">
+                                <i class="fas fa-dragon"></i>
+                            </div>
+                            <div class="team-info">
+                                <h4>OG</h4>
+                                <span class="score">3</span>
+                            </div>
+                        </div>
+                        <div class="vs">vs</div>
+                        <div class="team loser">
+                            <div class="team-info">
+                                <h4>Team Liquid</h4>
+                                <span class="score">2</span>
+                            </div>
+                            <div class="team-logo">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-details">
+                        <span class="tournament-type">Semi Final</span>
+                        <span class="prize-pool">$250,000</span>
+                    </div>
+                </div>
+                
+                <div class="result-card scroll-animate">
+                    <div class="result-header">
+                        <h3>PGL Arlington Major</h3>
+                        <span class="result-date">December 5, 2024</span>
+                    </div>
+                    <div class="match-result">
+                        <div class="team winner">
+                            <div class="team-logo">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="team-info">
+                                <h4>Evil Geniuses</h4>
+                                <span class="score">2</span>
+                            </div>
+                        </div>
+                        <div class="vs">vs</div>
+                        <div class="team loser">
+                            <div class="team-info">
+                                <h4>Fnatic</h4>
+                                <span class="score">0</span>
+                            </div>
+                            <div class="team-logo">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-details">
+                        <span class="tournament-type">Quarter Final</span>
+                        <span class="prize-pool">$125,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Rankings Section -->
+    <section class="team-rankings-section">
+        <div class="container">
+            <h2 class="section-title">Team Rankings</h2>
+            <p class="section-subtitle">Current DPC rankings and team statistics</p>
+            
+            <div class="rankings-table">
+                <div class="table-header">
+                    <span class="rank-col">Rank</span>
+                    <span class="team-col">Team</span>
+                    <span class="points-col">DPC Points</span>
+                    <span class="earnings-col">Earnings</span>
+                    <span class="tournaments-col">Tournaments</span>
+                </div>
+                
+                <div class="ranking-row scroll-animate">
+                    <span class="rank">1</span>
+                    <div class="team-info">
+                        <div class="team-logo">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="team-details">
+                            <h4>Team Spirit</h4>
+                            <span class="region">CIS</span>
+                        </div>
+                    </div>
+                    <span class="points">2,450</span>
+                    <span class="earnings">$8,250,000</span>
+                    <span class="tournaments">15</span>
+                </div>
+                
+                <div class="ranking-row scroll-animate">
+                    <span class="rank">2</span>
+                    <div class="team-info">
+                        <div class="team-logo">
+                            <i class="fas fa-dragon"></i>
+                        </div>
+                        <div class="team-details">
+                            <h4>PSG.LGD</h4>
+                            <span class="region">China</span>
+                        </div>
+                    </div>
+                    <span class="points">2,320</span>
+                    <span class="earnings">$7,850,000</span>
+                    <span class="tournaments">18</span>
+                </div>
+                
+                <div class="ranking-row scroll-animate">
+                    <span class="rank">3</span>
+                    <div class="team-info">
+                        <div class="team-logo">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="team-details">
+                            <h4>Team Liquid</h4>
+                            <span class="region">Europe</span>
+                        </div>
+                    </div>
+                    <span class="points">2,180</span>
+                    <span class="earnings">$6,920,000</span>
+                    <span class="tournaments">16</span>
+                </div>
+                
+                <div class="ranking-row scroll-animate">
+                    <span class="rank">4</span>
+                    <div class="team-info">
+                        <div class="team-logo">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="team-details">
+                            <h4>OG</h4>
+                            <span class="region">Europe</span>
+                        </div>
+                    </div>
+                    <span class="points">2,050</span>
+                    <span class="earnings">$12,450,000</span>
+                    <span class="tournaments">20</span>
+                </div>
+                
+                <div class="ranking-row scroll-animate">
+                    <span class="rank">5</span>
+                    <div class="team-info">
+                        <div class="team-logo">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="team-details">
+                            <h4>Evil Geniuses</h4>
+                            <span class="region">North America</span>
+                        </div>
+                    </div>
+                    <span class="points">1,920</span>
+                    <span class="earnings">$5,680,000</span>
+                    <span class="tournaments">14</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament Calendar Section -->
+    <section class="tournament-calendar-section">
+        <div class="container">
+            <h2 class="section-title">Tournament Calendar</h2>
+            <p class="section-subtitle">Complete schedule of upcoming tournaments and events</p>
+            
+            <div class="calendar-grid">
+                <div class="month-section">
+                    <h3>December 2024</h3>
+                    <div class="calendar-events">
+                        <div class="calendar-event">
+                            <span class="event-date">Dec 15-20</span>
+                            <span class="event-name">BTS Pro Series Season 15</span>
+                            <span class="event-prize">$300,000</span>
+                        </div>
+                        <div class="calendar-event">
+                            <span class="event-date">Dec 22-28</span>
+                            <span class="event-name">ESL One Winter 2024</span>
+                            <span class="event-prize">$500,000</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="month-section">
+                    <h3>January 2025</h3>
+                    <div class="calendar-events">
+                        <div class="calendar-event">
+                            <span class="event-date">Jan 8-15</span>
+                            <span class="event-name">WePlay AniMajor</span>
+                            <span class="event-prize">$1,500,000</span>
+                        </div>
+                        <div class="calendar-event">
+                            <span class="event-date">Jan 20-25</span>
+                            <span class="event-name">DreamLeague Season 23</span>
+                            <span class="event-prize">$750,000</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="month-section">
+                    <h3>February 2025</h3>
+                    <div class="calendar-events">
+                        <div class="calendar-event">
+                            <span class="event-date">Feb 12-18</span>
+                            <span class="event-name">ESL One Katowice 2025</span>
+                            <span class="event-prize">$1,000,000</span>
+                        </div>
+                        <div class="calendar-event">
+                            <span class="event-date">Feb 25-28</span>
+                            <span class="event-name">PGL Minor Championship</span>
+                            <span class="event-prize">$300,000</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="month-section">
+                    <h3>March 2025</h3>
+                    <div class="calendar-events">
+                        <div class="calendar-event">
+                            <span class="event-date">Mar 5-12</span>
+                            <span class="event-name">PGL Major Stockholm</span>
+                            <span class="event-prize">$2,000,000</span>
+                        </div>
+                        <div class="calendar-event">
+                            <span class="event-date">Mar 20-25</span>
+                            <span class="event-name">BTS Pro Series Season 16</span>
+                            <span class="event-prize">$400,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Dota Heroes. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-gamepad"></i> Dota Heroes</h3>
+                    <p>Your ultimate guide to mastering Dota 2 heroes. Comprehensive strategies, builds, and meta analysis to help you climb the ranks.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-reddit"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="heroes.html"><i class="fas fa-users"></i> All Heroes</a></li>
+                        <li><a href="meta.html"><i class="fas fa-chart-line"></i> Meta Analysis</a></li>
+                        <li><a href="guides.html"><i class="fas fa-book"></i> Strategy Guides</a></li>
+                        <li><a href="tournaments.html"><i class="fas fa-trophy"></i> Tournaments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-tools"></i> Resources</h4>
+                    <ul>
+                        <li><a href="news.html"><i class="fas fa-newspaper"></i> Latest News</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-shield-alt"></i> Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html"><i class="fas fa-user-shield"></i> Privacy Policy</a></li>
+                        <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                        <li><a href="sitemap.html"><i class="fas fa-sitemap"></i> Sitemap</a></li>
+                        <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dota Heroes. All rights reserved. Not affiliated with Valve Corporation.</p>
+                <p>Dota 2 is a registered trademark of Valve Corporation.</p>
+            </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>
