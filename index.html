@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dota 2 Heroes - Home</title>
+    <title>Dota 2 Heroes - Master Every Hero in the Game</title>
+    <meta name="description" content="Comprehensive Dota 2 hero guides, strategies, builds, and meta analysis. Master every hero with our detailed guides and expert tips.">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/animations.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Floating Background Icons -->
@@ -18,9 +19,11 @@
         <div class="floating-icon" data-speed="2.5"><i class="fas fa-bolt"></i></div>
         <div class="floating-icon" data-speed="1.8"><i class="fas fa-gem"></i></div>
         <div class="floating-icon" data-speed="2.2"><i class="fas fa-crown"></i></div>
+        <div class="floating-icon" data-speed="1.2"><i class="fas fa-dragon"></i></div>
+        <div class="floating-icon" data-speed="2.8"><i class="fas fa-star"></i></div>
     </div>
 
-    <!-- Navigation -->
+    <!-- Enhanced Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -28,12 +31,12 @@
                 <span>Dota Heroes</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="heroes.html">Heroes</a></li>
-                <li><a href="meta.html">Meta</a></li>
-                <li><a href="guides.html">Guides</a></li>
-                <li><a href="tournaments.html">Tournaments</a></li>
-                <li><a href="news.html">News</a></li>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="heroes.html"><i class="fas fa-users"></i> Heroes</a></li>
+                <li><a href="meta.html"><i class="fas fa-chart-line"></i> Meta</a></li>
+                <li><a href="guides.html"><i class="fas fa-book"></i> Guides</a></li>
+                <li><a href="tournaments.html"><i class="fas fa-trophy"></i> Tournaments</a></li>
+                <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
             </ul>
             <div class="nav-toggle">
                 <span></span>
@@ -43,17 +46,41 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Enhanced Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1 class="hero-title">
                 <span class="title-line">Master the</span>
                 <span class="title-line highlight">Dota 2 Heroes</span>
             </h1>
-            <p class="hero-subtitle">Discover strategies, builds, and master every hero in the game</p>
+            <p class="hero-subtitle">Discover comprehensive strategies, optimal builds, and master every hero in the most competitive MOBA game. Join millions of players worldwide in the ultimate battle for supremacy.</p>
             <div class="hero-buttons">
-                <a href="heroes.html" class="btn btn-primary">Explore Heroes</a>
-                <a href="meta.html" class="btn btn-secondary">View Meta</a>
+                <a href="heroes.html" class="btn btn-primary">
+                    <i class="fas fa-search"></i>
+                    Explore Heroes
+                </a>
+                <a href="meta.html" class="btn btn-secondary">
+                    <i class="fas fa-chart-line"></i>
+                    View Meta
+                </a>
+                <a href="guides.html" class="btn btn-outline">
+                    <i class="fas fa-graduation-cap"></i>
+                    Learn Guides
+                </a>
+            </div>
+            <div class="hero-features">
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>120+ Hero Guides</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Updated Meta Analysis</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Pro Strategies</span>
+                </div>
             </div>
         </div>
         <div class="hero-visual">
@@ -61,131 +88,303 @@
                 <div class="floating-hero">
                     <i class="fas fa-user-ninja"></i>
                 </div>
+                <div class="hero-glow"></div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Heroes -->
+    <!-- Enhanced Featured Heroes -->
     <section class="featured-heroes">
         <div class="container">
             <h2 class="section-title">Featured Heroes</h2>
+            <p class="section-subtitle">Discover the most popular and powerful heroes in the current meta</p>
             <div class="heroes-grid">
-                <div class="hero-card" data-hero="invoker">
+                <div class="hero-card scroll-animate" data-hero="invoker">
                     <div class="hero-card-image">
                         <i class="fas fa-magic"></i>
+                        <div class="hero-badge">Popular</div>
                     </div>
                     <div class="hero-card-content">
                         <h3>Invoker</h3>
-                        <p>Master of the Elements</p>
+                        <p>Master of the Elements - The most complex hero in Dota 2</p>
                         <div class="hero-stats">
-                            <span class="stat">Complexity: High</span>
-                            <span class="stat">Role: Mid</span>
+                            <span class="stat"><i class="fas fa-brain"></i> Complexity: High</span>
+                            <span class="stat"><i class="fas fa-crosshairs"></i> Role: Mid</span>
+                        </div>
+                        <div class="hero-abilities">
+                            <span class="ability"><i class="fas fa-fire"></i> Quas</span>
+                            <span class="ability"><i class="fas fa-bolt"></i> Wex</span>
+                            <span class="ability"><i class="fas fa-snowflake"></i> Exort</span>
                         </div>
                     </div>
                 </div>
-                <div class="hero-card" data-hero="crystal-maiden">
+                <div class="hero-card scroll-animate" data-hero="crystal-maiden">
                     <div class="hero-card-image">
                         <i class="fas fa-snowflake"></i>
+                        <div class="hero-badge">Beginner</div>
                     </div>
                     <div class="hero-card-content">
                         <h3>Crystal Maiden</h3>
-                        <p>Frost Sorceress</p>
+                        <p>Frost Sorceress - Perfect support hero for new players</p>
                         <div class="hero-stats">
-                            <span class="stat">Complexity: Low</span>
-                            <span class="stat">Role: Support</span>
+                            <span class="stat"><i class="fas fa-brain"></i> Complexity: Low</span>
+                            <span class="stat"><i class="fas fa-heart"></i> Role: Support</span>
+                        </div>
+                        <div class="hero-abilities">
+                            <span class="ability"><i class="fas fa-snowflake"></i> Crystal Nova</span>
+                            <span class="ability"><i class="fas fa-magic"></i> Frostbite</span>
+                            <span class="ability"><i class="fas fa-star"></i> Freezing Field</span>
                         </div>
                     </div>
                 </div>
-                <div class="hero-card" data-hero="phantom-assassin">
+                <div class="hero-card scroll-animate" data-hero="phantom-assassin">
                     <div class="hero-card-image">
                         <i class="fas fa-dagger"></i>
+                        <div class="hero-badge">Meta</div>
                     </div>
                     <div class="hero-card-content">
                         <h3>Phantom Assassin</h3>
-                        <p>Mortal Strike</p>
+                        <p>Mortal Strike - Deadly carry with critical strike potential</p>
                         <div class="hero-stats">
-                            <span class="stat">Complexity: Medium</span>
-                            <span class="stat">Role: Carry</span>
+                            <span class="stat"><i class="fas fa-brain"></i> Complexity: Medium</span>
+                            <span class="stat"><i class="fas fa-sword"></i> Role: Carry</span>
+                        </div>
+                        <div class="hero-abilities">
+                            <span class="ability"><i class="fas fa-dagger"></i> Stifling Dagger</span>
+                            <span class="ability"><i class="fas fa-running"></i> Phantom Strike</span>
+                            <span class="ability"><i class="fas fa-skull"></i> Coup de Grace</span>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="section-actions">
+                <a href="heroes.html" class="btn btn-primary">
+                    <i class="fas fa-arrow-right"></i>
+                    View All Heroes
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Quick Stats -->
+    <!-- Enhanced Quick Stats -->
     <section class="quick-stats">
         <div class="container">
+            <h2 class="section-title">Dota 2 Statistics</h2>
+            <p class="section-subtitle">Impressive numbers that showcase the scale of Dota 2</p>
             <div class="stats-grid">
-                <div class="stat-item">
+                <div class="stat-item scroll-animate">
                     <div class="stat-icon">
                         <i class="fas fa-users"></i>
                     </div>
                     <div class="stat-content">
                         <h3>120+</h3>
-                        <p>Heroes</p>
+                        <p>Unique Heroes</p>
+                        <span class="stat-description">Each with unique abilities and playstyles</span>
                     </div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item scroll-animate">
                     <div class="stat-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
                     <div class="stat-content">
                         <h3>50+</h3>
-                        <p>Tournaments</p>
+                        <p>Major Tournaments</p>
+                        <span class="stat-description">Including The International with $40M+ prize pools</span>
                     </div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item scroll-animate">
                     <div class="stat-icon">
                         <i class="fas fa-book"></i>
                     </div>
                     <div class="stat-content">
                         <h3>200+</h3>
-                        <p>Guides</p>
+                        <p>Detailed Guides</p>
+                        <span class="stat-description">Comprehensive strategies and builds</span>
                     </div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item scroll-animate">
                     <div class="stat-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="stat-content">
                         <h3>24/7</h3>
                         <p>Meta Updates</p>
+                        <span class="stat-description">Real-time meta analysis and updates</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- New Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Platform?</h2>
+            <p class="section-subtitle">Comprehensive tools and resources to improve your Dota 2 gameplay</p>
+            <div class="features-grid">
+                <div class="feature-card scroll-animate-left">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Expert Guides</h3>
+                    <p>Learn from professional players and top-ranked players with detailed hero guides, item builds, and strategic advice.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Pro player strategies</li>
+                        <li><i class="fas fa-check"></i> Item build optimization</li>
+                        <li><i class="fas fa-check"></i> Counter-pick analysis</li>
+                    </ul>
+                </div>
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Meta Analysis</h3>
+                    <p>Stay ahead of the competition with real-time meta analysis, win rates, and pick rates for all heroes.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Real-time statistics</li>
+                        <li><i class="fas fa-check"></i> Meta trends</li>
+                        <li><i class="fas fa-check"></i> Win rate analysis</li>
+                    </ul>
+                </div>
+                <div class="feature-card scroll-animate-right">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>Join a thriving community of Dota 2 players, share strategies, and learn from fellow gamers.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Active forums</li>
+                        <li><i class="fas fa-check"></i> Strategy sharing</li>
+                        <li><i class="fas fa-check"></i> Community events</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="news-section">
+        <div class="container">
+            <h2 class="section-title">Latest News & Updates</h2>
+            <p class="section-subtitle">Stay updated with the latest Dota 2 news, patches, and tournament updates</p>
+            <div class="news-grid">
+                <article class="news-card scroll-animate">
+                    <div class="news-image">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date"><i class="fas fa-calendar"></i> Dec 15, 2024</span>
+                            <span class="news-category"><i class="fas fa-tag"></i> Patch</span>
+                        </div>
+                        <h3>7.35 Patch Notes Released</h3>
+                        <p>Major balance changes affecting the meta. New items and hero reworks announced.</p>
+                        <a href="news.html" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card scroll-animate">
+                    <div class="news-image">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date"><i class="fas fa-calendar"></i> Dec 12, 2024</span>
+                            <span class="news-category"><i class="fas fa-tag"></i> Tournament</span>
+                        </div>
+                        <h3>The International 2024 Announced</h3>
+                        <p>Valve announces the biggest Dota 2 tournament of the year with record-breaking prize pool.</p>
+                        <a href="news.html" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card scroll-animate">
+                    <div class="news-image">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date"><i class="fas fa-calendar"></i> Dec 10, 2024</span>
+                            <span class="news-category"><i class="fas fa-tag"></i> Hero</span>
+                        </div>
+                        <h3>New Hero Teased</h3>
+                        <p>Valve releases cryptic teaser for upcoming hero. Community speculates on abilities and lore.</p>
+                        <a href="news.html" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            <div class="section-actions">
+                <a href="news.html" class="btn btn-primary">
+                    <i class="fas fa-newspaper"></i>
+                    View All News
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Master Dota 2?</h2>
+                <p>Join thousands of players improving their skills with our comprehensive guides and tools.</p>
+                <div class="cta-buttons">
+                    <a href="heroes.html" class="btn btn-primary">
+                        <i class="fas fa-play"></i>
+                        Start Learning
+                    </a>
+                    <a href="about.html" class="btn btn-outline">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Dota Heroes</h3>
-                    <p>Your ultimate guide to mastering Dota 2 heroes</p>
+                    <h3><i class="fas fa-gamepad"></i> Dota Heroes</h3>
+                    <p>Your ultimate guide to mastering Dota 2 heroes. Comprehensive strategies, builds, and meta analysis to help you climb the ranks.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-reddit"></i></a>
+                    </div>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
                     <ul>
-                        <li><a href="heroes.html">Heroes</a></li>
-                        <li><a href="meta.html">Meta</a></li>
-                        <li><a href="guides.html">Guides</a></li>
-                        <li><a href="tournaments.html">Tournaments</a></li>
+                        <li><a href="heroes.html"><i class="fas fa-users"></i> All Heroes</a></li>
+                        <li><a href="meta.html"><i class="fas fa-chart-line"></i> Meta Analysis</a></li>
+                        <li><a href="guides.html"><i class="fas fa-book"></i> Strategy Guides</a></li>
+                        <li><a href="tournaments.html"><i class="fas fa-trophy"></i> Tournaments</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Resources</h4>
+                    <h4><i class="fas fa-tools"></i> Resources</h4>
                     <ul>
-                        <li><a href="news.html">News</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="news.html"><i class="fas fa-newspaper"></i> Latest News</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-shield-alt"></i> Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html"><i class="fas fa-user-shield"></i> Privacy Policy</a></li>
+                        <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                        <li><a href="sitemap.html"><i class="fas fa-sitemap"></i> Sitemap</a></li>
+                        <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Dota Heroes. All rights reserved.</p>
+                <p>&copy; 2024 Dota Heroes. All rights reserved. Not affiliated with Valve Corporation.</p>
+                <p>Dota 2 is a registered trademark of Valve Corporation.</p>
             </div>
         </div>
     </footer>
