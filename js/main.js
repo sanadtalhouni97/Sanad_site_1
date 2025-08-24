@@ -1,15 +1,19 @@
 // Enhanced Main JavaScript for Dota 2 Heroes Website
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all components
-    initializeNavigation();
-    initializeAnimations();
-    initializeMouseEffects();
-    initializeScrollEffects();
-    initializeInteractiveElements();
-    initializePerformanceOptimizations();
-    
-    console.log('🚀 Dota 2 Heroes website enhanced and ready!');
+    try {
+        // Initialize all components
+        initializeNavigation();
+        initializeAnimations();
+        initializeMouseEffects();
+        initializeScrollEffects();
+        initializeInteractiveElements();
+        initializePerformanceOptimizations();
+        
+        console.log('🚀 Dota 2 Heroes website enhanced and ready!');
+    } catch (error) {
+        console.error('Error initializing website:', error);
+    }
 });
 
 // Enhanced Navigation System
@@ -98,14 +102,17 @@ function initializeAnimations() {
     // Enhanced floating icons parallax with more dynamic movement
     const floatingIcons = document.querySelectorAll('.floating-icon');
     window.addEventListener('scroll', throttle(() => {
-        const scrolled = window.pageYOffset;
+        const scrolled = window.pageYOffset || 0;
         floatingIcons.forEach((icon, index) => {
             const speed = parseFloat(icon.getAttribute('data-speed')) || 0.5;
             const yPos = -(scrolled * speed * 0.2);
             const xPos = Math.sin(scrolled * 0.001 + index * 0.5) * 30;
             const rotation = scrolled * 0.02 + index * 10;
             
-            icon.style.transform = `translate(${xPos}px, ${yPos}px) rotate(${rotation}deg)`;
+            // Ensure all values are valid numbers
+            if (!isNaN(yPos) && !isNaN(xPos) && !isNaN(rotation)) {
+                icon.style.transform = `translate(${xPos}px, ${yPos}px) rotate(${rotation}deg)`;
+            }
         });
     }, 16));
 
@@ -123,8 +130,8 @@ function initializeAnimations() {
     });
 
     // Enhanced counter animation for stats
-    const statNumbers = document.querySelectorAll('.stat-content h3');
-    const statsSection = document.querySelector('.quick-stats');
+    const statNumbers = document.querySelectorAll('.stat-content h3, .stat-content .stat-number');
+    const statsSection = document.querySelector('.quick-stats, .tournament-stats-overview');
     
     if (statsSection) {
         const statsObserver = new IntersectionObserver((entries) => {
@@ -132,9 +139,33 @@ function initializeAnimations() {
                 if (entry.isIntersecting) {
                     statNumbers.forEach((stat, index) => {
                         setTimeout(() => {
-                            const target = parseInt(stat.textContent.replace(/\D/g, ''));
-                            if (!isNaN(target)) {
-                                animateCounter(stat, target);
+                            const text = stat.textContent;
+                            // Handle different number formats (e.g., "120+", "10M+", "$45.2M", "24/7")
+                            let target = 0;
+                            let suffix = '';
+                            
+                            if (text.includes('+')) {
+                                target = parseInt(text.replace(/\D/g, ''));
+                                suffix = '+';
+                            } else if (text.includes('M')) {
+                                target = parseFloat(text.replace(/[^\d.]/g, '')) * 1000000;
+                                suffix = 'M';
+                            } else if (text.includes('K')) {
+                                target = parseFloat(text.replace(/[^\d.]/g, '')) * 1000;
+                                suffix = 'K';
+                            } else if (text.includes('$')) {
+                                target = parseFloat(text.replace(/[^\d.]/g, ''));
+                                suffix = text.replace(/\d/g, '');
+                            } else if (text.includes('/')) {
+                                // Handle cases like "24/7"
+                                target = parseInt(text.split('/')[0]);
+                                suffix = '/' + text.split('/')[1];
+                            } else {
+                                target = parseInt(text.replace(/\D/g, ''));
+                            }
+                            
+                            if (!isNaN(target) && target > 0) {
+                                animateCounter(stat, target, suffix);
                             }
                         }, index * 200);
                     });
@@ -148,24 +179,50 @@ function initializeAnimations() {
 }
 
 // Counter animation function
-function animateCounter(element, target) {
-    const duration = 2000;
-    const start = 0;
-    const increment = target / (duration / 16);
-    let current = start;
-    
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            current = target;
-            clearInterval(timer);
+function animateCounter(element, target, suffix = '') {
+    try {
+        // Validate inputs
+        if (!element || !element.textContent) {
+            console.warn('Invalid element for counter animation');
+            return;
         }
         
-        const displayValue = Math.floor(current);
-        const originalText = element.textContent;
-        const suffix = originalText.replace(/\d+/g, '');
-        element.textContent = displayValue + suffix;
-    }, 16);
+        if (isNaN(target) || target <= 0) {
+            console.warn('Invalid target value for counter animation:', target);
+            return;
+        }
+        
+        const duration = 2000;
+        const start = 0;
+        const increment = target / (duration / 16);
+        let current = start;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            
+            let displayValue = Math.floor(current);
+            
+            // Format the display value based on the suffix
+            if (suffix === 'M' && target >= 1000000) {
+                displayValue = (current / 1000000).toFixed(1);
+            } else if (suffix === 'K' && target >= 1000) {
+                displayValue = (current / 1000).toFixed(1);
+            } else if (suffix.includes('$')) {
+                displayValue = current.toFixed(1);
+            }
+            
+            // Ensure the display value is valid
+            if (!isNaN(displayValue)) {
+                element.textContent = displayValue + suffix;
+            }
+        }, 16);
+    } catch (error) {
+        console.error('Error in counter animation:', error);
+    }
 }
 
 // Enhanced Mouse Effects
@@ -188,8 +245,11 @@ function initializeMouseEffects() {
         followX += (mouseX - followX) * 0.1;
         followY += (mouseY - followY) * 0.1;
         
-        mouseFollow.style.left = followX - 10 + 'px';
-        mouseFollow.style.top = followY - 10 + 'px';
+        // Ensure values are valid numbers
+        if (!isNaN(followX) && !isNaN(followY)) {
+            mouseFollow.style.left = (followX - 10) + 'px';
+            mouseFollow.style.top = (followY - 10) + 'px';
+        }
         
         requestAnimationFrame(animateMouseFollow);
     }
@@ -203,8 +263,16 @@ function initializeMouseEffects() {
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
             
-            card.style.setProperty('--mouse-x', (x / rect.width) * 100 + '%');
-            card.style.setProperty('--mouse-y', (y / rect.height) * 100 + '%');
+            // Ensure calculations are valid
+            if (rect.width > 0 && rect.height > 0) {
+                const xPercent = (x / rect.width) * 100;
+                const yPercent = (y / rect.height) * 100;
+                
+                if (!isNaN(xPercent) && !isNaN(yPercent)) {
+                    card.style.setProperty('--mouse-x', xPercent + '%');
+                    card.style.setProperty('--mouse-y', yPercent + '%');
+                }
+            }
         });
 
         card.addEventListener('click', function() {
@@ -245,11 +313,15 @@ function initializeScrollEffects() {
     // Parallax effect for sections
     const parallaxElements = document.querySelectorAll('.parallax');
     window.addEventListener('scroll', throttle(() => {
-        const scrolled = window.pageYOffset;
+        const scrolled = window.pageYOffset || 0;
         parallaxElements.forEach(element => {
-            const speed = element.getAttribute('data-speed') || 0.5;
+            const speed = parseFloat(element.getAttribute('data-speed')) || 0.5;
             const yPos = -(scrolled * speed);
-            element.style.transform = `translateY(${yPos}px)`;
+            
+            // Ensure the value is a valid number
+            if (!isNaN(yPos)) {
+                element.style.transform = `translateY(${yPos}px)`;
+            }
         });
     }, 16));
 
@@ -260,10 +332,15 @@ function initializeScrollEffects() {
     document.body.appendChild(progressBar);
 
     window.addEventListener('scroll', throttle(() => {
-        const scrolled = window.pageYOffset;
+        const scrolled = window.pageYOffset || 0;
         const height = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = (scrolled / height) * 100;
-        progressBar.querySelector('.scroll-progress-fill').style.width = progress + '%';
+        const progress = height > 0 ? (scrolled / height) * 100 : 0;
+        
+        // Ensure progress is a valid number between 0 and 100
+        const validProgress = Math.max(0, Math.min(100, progress));
+        if (!isNaN(validProgress)) {
+            progressBar.querySelector('.scroll-progress-fill').style.width = validProgress + '%';
+        }
     }, 16));
 }
 
@@ -284,17 +361,20 @@ function initializeInteractiveElements() {
             let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
             let top = rect.top - tooltipRect.height - 10;
             
-            // Adjust if tooltip goes off screen
-            if (left < 10) left = 10;
-            if (left + tooltipRect.width > window.innerWidth - 10) {
-                left = window.innerWidth - tooltipRect.width - 10;
+            // Ensure calculations are valid
+            if (!isNaN(left) && !isNaN(top) && !isNaN(tooltipRect.width) && !isNaN(tooltipRect.height)) {
+                // Adjust if tooltip goes off screen
+                if (left < 10) left = 10;
+                if (left + tooltipRect.width > window.innerWidth - 10) {
+                    left = window.innerWidth - tooltipRect.width - 10;
+                }
+                if (top < 10) {
+                    top = rect.bottom + 10;
+                }
+                
+                tooltip.style.left = left + 'px';
+                tooltip.style.top = top + 'px';
             }
-            if (top < 10) {
-                top = rect.bottom + 10;
-            }
-            
-            tooltip.style.left = left + 'px';
-            tooltip.style.top = top + 'px';
             tooltip.classList.add('show');
         });
 
@@ -386,17 +466,47 @@ function initializePerformanceOptimizations() {
 }
 
 // Utility Functions
-function animateCounter(element, target) {
-    let current = 0;
-    const increment = target / 50;
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            current = target;
-            clearInterval(timer);
+function animateCounter(element, target, suffix = '') {
+    try {
+        // Validate inputs
+        if (!element || !element.textContent) {
+            console.warn('Invalid element for counter animation');
+            return;
         }
-        element.textContent = Math.floor(current) + (target > 100 ? '+' : '');
-    }, 30);
+        
+        if (isNaN(target) || target <= 0) {
+            console.warn('Invalid target value for counter animation:', target);
+            return;
+        }
+        
+        let current = 0;
+        const increment = target / 50;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            
+            let displayValue = Math.floor(current);
+            
+            // Format the display value based on the suffix
+            if (suffix === 'M' && target >= 1000000) {
+                displayValue = (current / 1000000).toFixed(1);
+            } else if (suffix === 'K' && target >= 1000) {
+                displayValue = (current / 1000).toFixed(1);
+            } else if (suffix.includes('$')) {
+                displayValue = current.toFixed(1);
+            }
+            
+            // Ensure the display value is valid
+            if (!isNaN(displayValue)) {
+                element.textContent = displayValue + suffix;
+            }
+        }, 30);
+    } catch (error) {
+        console.error('Error in counter animation:', error);
+    }
 }
 
 function createParticleEffect(e) {
@@ -406,13 +516,25 @@ function createParticleEffect(e) {
     for (let i = 0; i < particles; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
-        particle.style.left = (e.clientX - rect.left) + 'px';
-        particle.style.top = (e.clientY - rect.top) + 'px';
-        particle.style.transform = `rotate(${Math.random() * 360}deg)`;
         
-        e.target.appendChild(particle);
+        // Ensure position calculations are valid
+        const left = e.clientX - rect.left;
+        const top = e.clientY - rect.top;
+        const rotation = Math.random() * 360;
         
-        setTimeout(() => particle.remove(), 1000);
+        if (!isNaN(left) && !isNaN(top) && !isNaN(rotation)) {
+            particle.style.left = left + 'px';
+            particle.style.top = top + 'px';
+            particle.style.transform = `rotate(${rotation}deg)`;
+            
+            e.target.appendChild(particle);
+            
+            setTimeout(() => {
+                if (particle && particle.parentNode) {
+                    particle.remove();
+                }
+            }, 1000);
+        }
     }
 }
 
