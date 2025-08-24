@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heroes - Dota 2 Heroes</title>
+    <title>All Heroes - Dota 2 Heroes Database</title>
+    <meta name="description" content="Browse and discover all 120+ Dota 2 heroes. Filter by role, complexity, and attributes. Find detailed guides and strategies for every hero.">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/animations.css">
     <link rel="stylesheet" href="styles/heroes.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Floating Background Icons -->
@@ -19,9 +20,11 @@
         <div class="floating-icon" data-speed="2.5"><i class="fas fa-bolt"></i></div>
         <div class="floating-icon" data-speed="1.8"><i class="fas fa-gem"></i></div>
         <div class="floating-icon" data-speed="2.2"><i class="fas fa-crown"></i></div>
+        <div class="floating-icon" data-speed="1.2"><i class="fas fa-dragon"></i></div>
+        <div class="floating-icon" data-speed="2.8"><i class="fas fa-star"></i></div>
     </div>
 
-    <!-- Navigation -->
+    <!-- Enhanced Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -29,12 +32,12 @@
                 <span>Dota Heroes</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="heroes.html" class="active">Heroes</a></li>
-                <li><a href="meta.html">Meta</a></li>
-                <li><a href="guides.html">Guides</a></li>
-                <li><a href="tournaments.html">Tournaments</a></li>
-                <li><a href="news.html">News</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="heroes.html" class="active"><i class="fas fa-users"></i> Heroes</a></li>
+                <li><a href="meta.html"><i class="fas fa-chart-line"></i> Meta</a></li>
+                <li><a href="guides.html"><i class="fas fa-book"></i> Guides</a></li>
+                <li><a href="tournaments.html"><i class="fas fa-trophy"></i> Tournaments</a></li>
+                <li><a href="news.html"><i class="fas fa-newspaper"></i> News</a></li>
             </ul>
             <div class="nav-toggle">
                 <span></span>
@@ -44,81 +47,311 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Enhanced Hero Section -->
     <section class="hero-section">
         <div class="container">
             <h1 class="hero-title">All Heroes</h1>
-            <p class="hero-subtitle">Discover and master every hero in Dota 2</p>
+            <p class="hero-subtitle">Discover and master every hero in Dota 2. Filter by role, complexity, and attributes to find your perfect hero.</p>
             
-            <!-- Search and Filters -->
+            <!-- Enhanced Search and Filters -->
             <div class="search-filters">
                 <div class="search-box">
                     <i class="fas fa-search"></i>
-                    <input type="text" class="search-input" placeholder="Search heroes...">
+                    <input type="text" class="search-input" placeholder="Search heroes by name, role, or ability...">
+                    <button class="search-btn" type="button">
+                        <i class="fas fa-filter"></i>
+                    </button>
                 </div>
                 <div class="filters">
-                    <select class="filter-select" id="role-filter">
-                        <option value="">All Roles</option>
-                        <option value="carry">Carry</option>
-                        <option value="support">Support</option>
-                        <option value="mid">Mid</option>
-                        <option value="offlane">Offlane</option>
-                    </select>
-                    <select class="filter-select" id="complexity-filter">
-                        <option value="">All Complexity</option>
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High</option>
-                    </select>
-                    <select class="filter-select" id="attribute-filter">
-                        <option value="">All Attributes</option>
-                        <option value="strength">Strength</option>
-                        <option value="agility">Agility</option>
-                        <option value="intelligence">Intelligence</option>
-                    </select>
+                    <div class="filter-group">
+                        <label for="role-filter"><i class="fas fa-users"></i> Role</label>
+                        <select class="filter-select" id="role-filter">
+                            <option value="">All Roles</option>
+                            <option value="carry">Carry</option>
+                            <option value="support">Support</option>
+                            <option value="mid">Mid</option>
+                            <option value="offlane">Offlane</option>
+                            <option value="jungler">Jungler</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="complexity-filter"><i class="fas fa-brain"></i> Complexity</label>
+                        <select class="filter-select" id="complexity-filter">
+                            <option value="">All Complexity</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="attribute-filter"><i class="fas fa-dumbbell"></i> Attribute</label>
+                        <select class="filter-select" id="attribute-filter">
+                            <option value="">All Attributes</option>
+                            <option value="strength">Strength</option>
+                            <option value="agility">Agility</option>
+                            <option value="intelligence">Intelligence</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="meta-filter"><i class="fas fa-chart-line"></i> Meta Status</label>
+                        <select class="filter-select" id="meta-filter">
+                            <option value="">All Heroes</option>
+                            <option value="meta">Meta Heroes</option>
+                            <option value="counter">Counter Picks</option>
+                            <option value="niche">Niche Picks</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn btn-outline" id="clear-filters">
+                        <i class="fas fa-times"></i>
+                        Clear Filters
+                    </button>
+                    <button class="btn btn-primary" id="random-hero">
+                        <i class="fas fa-dice"></i>
+                        Random Hero
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Quick Stats -->
+            <div class="hero-stats-overview">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <span class="stat-number">120+</span>
+                    <span class="stat-label">Total Heroes</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-fire"></i>
+                    <span class="stat-number">15</span>
+                    <span class="stat-label">Meta Heroes</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <span class="stat-number">45</span>
+                    <span class="stat-label">Beginner Friendly</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-crown"></i>
+                    <span class="stat-number">25</span>
+                    <span class="stat-label">Pro Favorites</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Heroes Grid -->
+    <!-- Enhanced Heroes Grid -->
     <section class="heroes-section">
         <div class="container">
+            <div class="heroes-header">
+                <div class="heroes-info">
+                    <h2>Hero Database</h2>
+                    <p>Showing <span id="heroes-count">120</span> heroes</p>
+                </div>
+                <div class="view-options">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+            
             <div class="heroes-grid" id="heroes-grid">
                 <!-- Hero cards will be populated by JavaScript -->
             </div>
+            
+            <!-- Loading State -->
+            <div class="loading-state" id="loading-state">
+                <div class="loading-spinner"></div>
+                <p>Loading heroes...</p>
+            </div>
+            
+            <!-- No Results State -->
+            <div class="no-results" id="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No heroes found</h3>
+                <p>Try adjusting your search criteria or filters</p>
+                <button class="btn btn-primary" id="reset-search">
+                    <i class="fas fa-refresh"></i>
+                    Reset Search
+                </button>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Hero Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Hero Categories</h2>
+            <p class="section-subtitle">Explore heroes by their primary roles and playstyles</p>
+            
+            <div class="categories-grid">
+                <div class="category-card scroll-animate">
+                    <div class="category-icon">
+                        <i class="fas fa-sword"></i>
+                    </div>
+                    <h3>Carry Heroes</h3>
+                    <p>Late-game powerhouses that scale with farm and items</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-users"></i> 35 Heroes</span>
+                        <span><i class="fas fa-star"></i> High Impact</span>
+                    </div>
+                    <a href="#" class="category-link">View Carries <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-card scroll-animate">
+                    <div class="category-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Support Heroes</h3>
+                    <p>Team-focused heroes that provide utility and protection</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-users"></i> 40 Heroes</span>
+                        <span><i class="fas fa-shield"></i> Team Players</span>
+                    </div>
+                    <a href="#" class="category-link">View Supports <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-card scroll-animate">
+                    <div class="category-icon">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <h3>Mid Heroes</h3>
+                    <p>Versatile heroes that control the mid-game tempo</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-users"></i> 30 Heroes</span>
+                        <span><i class="fas fa-bolt"></i> High Tempo</span>
+                    </div>
+                    <a href="#" class="category-link">View Mids <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-card scroll-animate">
+                    <div class="category-icon">
+                        <i class="fas fa-shield"></i>
+                    </div>
+                    <h3>Offlane Heroes</h3>
+                    <p>Durable heroes that create space and disrupt enemies</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-users"></i> 25 Heroes</span>
+                        <span><i class="fas fa-anchor"></i> Space Creators</span>
+                    </div>
+                    <a href="#" class="category-link">View Offlaners <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meta Insights Section -->
+    <section class="meta-insights">
+        <div class="container">
+            <h2 class="section-title">Meta Insights</h2>
+            <p class="section-subtitle">Current meta trends and hero performance statistics</p>
+            
+            <div class="meta-grid">
+                <div class="meta-card scroll-animate-left">
+                    <h3><i class="fas fa-fire"></i> Top Picks</h3>
+                    <div class="meta-list">
+                        <div class="meta-item">
+                            <span class="hero-name">Phantom Assassin</span>
+                            <span class="pick-rate">65.2%</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="hero-name">Invoker</span>
+                            <span class="pick-rate">58.7%</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="hero-name">Crystal Maiden</span>
+                            <span class="pick-rate">52.1%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="meta-card scroll-animate">
+                    <h3><i class="fas fa-trophy"></i> Win Rates</h3>
+                    <div class="meta-list">
+                        <div class="meta-item">
+                            <span class="hero-name">Omniknight</span>
+                            <span class="win-rate">58.3%</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="hero-name">Wraith King</span>
+                            <span class="win-rate">56.9%</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="hero-name">Lich</span>
+                            <span class="win-rate">55.7%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="meta-card scroll-animate-right">
+                    <h3><i class="fas fa-ban"></i> Most Banned</h3>
+                    <div class="meta-list">
+                        <div class="meta-item">
+                            <span class="hero-name">Pudge</span>
+                            <span class="ban-rate">45.2%</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="hero-name">Techies</span>
+                            <span class="ban-rate">42.8%</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="hero-name">Meepo</span>
+                            <span class="ban-rate">38.5%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Dota Heroes</h3>
-                    <p>Your ultimate guide to mastering Dota 2 heroes</p>
+                    <h3><i class="fas fa-gamepad"></i> Dota Heroes</h3>
+                    <p>Your ultimate guide to mastering Dota 2 heroes. Comprehensive strategies, builds, and meta analysis to help you climb the ranks.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-reddit"></i></a>
+                    </div>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
                     <ul>
-                        <li><a href="heroes.html">Heroes</a></li>
-                        <li><a href="meta.html">Meta</a></li>
-                        <li><a href="guides.html">Guides</a></li>
-                        <li><a href="tournaments.html">Tournaments</a></li>
+                        <li><a href="heroes.html"><i class="fas fa-users"></i> All Heroes</a></li>
+                        <li><a href="meta.html"><i class="fas fa-chart-line"></i> Meta Analysis</a></li>
+                        <li><a href="guides.html"><i class="fas fa-book"></i> Strategy Guides</a></li>
+                        <li><a href="tournaments.html"><i class="fas fa-trophy"></i> Tournaments</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Resources</h4>
+                    <h4><i class="fas fa-tools"></i> Resources</h4>
                     <ul>
-                        <li><a href="news.html">News</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="news.html"><i class="fas fa-newspaper"></i> Latest News</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-shield-alt"></i> Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html"><i class="fas fa-user-shield"></i> Privacy Policy</a></li>
+                        <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                        <li><a href="sitemap.html"><i class="fas fa-sitemap"></i> Sitemap</a></li>
+                        <li><a href="support.html"><i class="fas fa-headset"></i> Support</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Dota Heroes. All rights reserved.</p>
+                <p>&copy; 2024 Dota Heroes. All rights reserved. Not affiliated with Valve Corporation.</p>
+                <p>Dota 2 is a registered trademark of Valve Corporation.</p>
             </div>
         </div>
     </footer>
